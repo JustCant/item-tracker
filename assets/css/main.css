@@ -1,0 +1,40 @@
+.character {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 50px 50px;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  grid-template-areas: "top1 top2 top3 top4" "bottom1 bottom1 bottom2 bottom2";
+}
+.charName {
+  border: solid black 5px;
+  border-radius: 8px;
+  grid-area: top1;
+}
+.strScore {
+  border: solid black 5px;
+  border-radius: 8px;
+  grid-area: top2;
+}
+.carryCapacity {
+  border: solid black 5px;
+  border-radius: 8px;
+  grid-area: top3;
+}
+.pushPullLift {
+  border: solid black 5px;
+  border-radius: 8px;
+  grid-area: top4;
+}
+.currentItems {
+  border: solid black 5px;
+  border-radius: 8px;
+  grid-area: bottom1;
+}
+.addItems {
+  border: solid black 5px;
+  border-radius: 8px;
+  grid-area: bottom2;
+}
