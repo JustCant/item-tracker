@@ -1,4 +1,5 @@
 <div class="character">
+    <!--TOP ROW-->
     <div class="charName"> 
         <input class="charNameInput" type="text" ng-model="charName">
         <div class="charNameLabel">NAME: {{charName}}</div>
@@ -10,25 +11,39 @@
     </div>  
 
     <div class="carryCapacity">
-        Carry Capacity: {{strScore * 15}}
-    </div>
+        Carry Capacity: {{strScore * 15}} lbs
+    </div>    
 
     <div class="pushPullLift">
-        Push, Pull, Lift: {{strScore * 30}}
+        Push, Pull, Lift: {{strScore * 30}} lbs
     </div>
 
+    <div class="currentLoad">
+        <div>Current Load: {{load}} lbs</div>  
+        <div>Available weight: {{strScore * 15 - load}} lbs</div>
+    </div>
+
+    <!--BOTTOM ROW-->
     <div class="currentItems">
         Current Items: 
-        <ul >
-            <li ng-repeat="item in currentItems track by $index">{{item}}</li>
-        </ul>
+        <select>
+            <optgroup label="Weapons">
+                    <option value="{{weapon.name}}" ng-repeat="weapon in currentWeapons track by $index">{{weapon.name}} - {{weapon.weight}} lbs</option>
+            </optgroup>
+            <optgroup label="Armor">
+                    <option value="{{armor.name}}" ng-repeat="armor in currentArmor track by $index">{{armor.name}} - {{armor.weight}} lbs</option>
+            </optgroup>
+            <optgroup label="Potions">
+                    <option value="{{potion.name}}" ng-repeat="potion in currentPotions track by $index">{{potion.name}} - {{potion.weight}} lbs</option>
+            </optgroup>
+        </select>
     </div>
     
     <div class="addItems">
         Add Item:
         <ul>
-            <li value="{{item}}" ng-click="addItem(item)" ng-repeat="item in itemList">{{item}}</li>
+            <li value="{{item.name}}" ng-click="addItem(item)" ng-repeat="item in itemList">{{item.name}} - {{item.weight}} lbs</li>
         </ul>
     </div>  
-    
+
 </div>

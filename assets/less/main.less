@@ -3,12 +3,14 @@
     height: auto;
     display: grid;    
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 50px 50px;
+    grid-template-rows: 50px 50px 50px;
     grid-row-gap: 10px;
     grid-column-gap: 10px;
     grid-template-areas:
-    "top1 top2 top3 top4"
-    "bottom1 bottom1 bottom2 bottom2"
+    "top1 top2 top3"
+    "top1 top2 top4"
+    "top1 top2 top5"
+    "bottom1 . bottom2"
 }
 
 .charName {
@@ -33,6 +35,12 @@
     border: solid black 5px;
     border-radius: 8px;
     grid-area: top4;
+}
+
+.currentLoad {
+    border: solid black 5px;
+    border-radius: 8px;
+    grid-area: top5;
 }
 
 .currentItems {

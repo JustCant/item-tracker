@@ -35,14 +35,7 @@ module.exports = function(grunt) {
               options: {
                 spawn: false,
               },
-            },
-            html: {
-              files: ['**/*.html'],
-              tasks: [''],
-              options: {
-                spawn: false,
-              },
-            },
+            }
           },
     });
 
