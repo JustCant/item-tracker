@@ -1,0 +1,32 @@
+<div class="character">
+    <div class="topRow">
+        <div class="charName"> 
+            <input class="charNameInput" type="text" ng-model="charName">
+            <div class="charNameLabel">NAME: {{charName}}</div>
+        </div>
+        <div class="strScore">
+            <input class="strScoreInput" type="text" ng-model="strScore">
+            <div class="strScoreLabel">STR: {{strScore}}</div>
+        </div>    
+        <div class="carryCapacity">
+            Carry Capacity: {{strScore * 15}}
+        </div>
+        <div class="pushPullLift">
+            Push, Pull, Lift: {{strScore * 30}}
+        </div>
+    </div>
+    <div class="bottomRow">
+        <div>
+            Current Items: 
+            <ul class="currentItems">
+                <li ng-repeat="item in currentItems track by $index">{{item}}</li>
+            </ul>
+        </div>
+        <div>
+            Add Item:
+            <ul class="addItems">
+                <li value="{{item}}" ng-click="addItem(item)" ng-repeat="item in itemList">{{item}}</li>
+            </ul>
+        </div>        
+    </div>    
+</div>
