@@ -28,13 +28,13 @@
         Current Items: 
         <select>
             <optgroup label="Weapons">
-                    <option value="{{weapon.name}}" ng-repeat="weapon in currentItems.weapon track by $index">{{weapon.name}} - {{weapon.weight}} lbs</option>
+                <option value="{{weapon.name}}" ng-repeat="weapon in currentItems.weapon track by $index">{{weapon.name}} - {{weapon.weight}} lbs</option>
             </optgroup>
             <optgroup label="Armor">
-                    <option value="{{armor.name}}" ng-repeat="armor in currentItems.armor track by $index">{{armor.name}} - {{armor.weight}} lbs</option>
+                <option value="{{armor.name}}" ng-repeat="armor in currentItems.armor track by $index">{{armor.name}} - {{armor.weight}} lbs</option>
             </optgroup>
             <optgroup label="Potions">
-                    <option value="{{potion.name}}" ng-repeat="potion in currentItems.potion track by $index">{{potion.name}} - {{potion.weight}} lbs</option>
+                <option value="{{potion.name}}" ng-repeat="potion in currentItems.potion track by $index">{{potion.name}} - {{potion.weight}} lbs</option>
             </optgroup>
             <optgroup label="Ammunition">
                 <option value="{{ammo.name}}" ng-repeat="ammo in currentItems.ammunition track by $index">{{ammo.name}} - {{ammo.weight}} lbs</option>
@@ -71,9 +71,26 @@
     
     <div class="addItems">
         Add Item:
+        <label style="display: block">Search by Name: <input ng-model="searchName"></label>
+        Search by Type:
+        <select ng-model="searchType">
+            <option value="">All</option>
+            <option value="weapon">Weapon</option>
+            <option value="armor">Armor</option>
+            <option value="potion">Potion</option>
+            <option value="ammunition">Ammunition</option>
+            <option value="clothing">Clothing</option>
+            <option value="arcane_focus">Arcane Focus</option>
+            <option value="druidic_focus">Druidic Focus</option>
+            <option value="holy_symbol">Holy Symbol</option>
+            <option value="artisans_tools">Artisan's Tools</option>
+            <option value="gaming_set">Gaming Set</option>
+            <option value="kit">Kit</option>
+            <option value="musical_instrument">Musical Instrument</option>
+            <option value="miscellaneous">Miscellaneous</option>
+        </select>
         <ul>
-            <li value="{{item.name}}" ng-click="addItem(item)" ng-repeat="item in itemList">{{item.name}} - {{item.weight}} lbs</li>
+            <li value="{{item.name}}" ng-click="addItem(item)" ng-repeat="item in itemList | filter:{'name': searchName, 'type': searchType}">{{item.name}} - {{item.weight}} lbs</li>
         </ul>
     </div>  
-
 </div>

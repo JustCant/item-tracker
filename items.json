@@ -47,7 +47,7 @@
         "type": "armor",
         "class": "heavy"
     },"chainMail": {
-        "name": "chainMail",
+        "name": "Chain Mail",
         "weight": "55",
         "type": "armor",
         "class": "heavy"
@@ -317,7 +317,8 @@
     },
     "antitoxinVial": {
         "name": "Antitoxin (vial)",
-        "weight": "0.1"
+        "weight": "0.1",
+        "type": "miscellaneous"
     },
     "crystal": {
         "name": "Crystal",
@@ -346,75 +347,93 @@
     },
     "backpack": {
         "name": "Backpack",
-        "weight": "5"
+        "weight": "5",
+        "type": "miscellaneous"
     },
     "ballBearings": {
         "name": "Ball bearings (bag of 1,000)",
-        "weight": "2"
+        "weight": "2",
+        "type": "miscellaneous"
     },
     "barrel": {
         "name": "Barrel",
-        "weight": "70"
+        "weight": "70",
+        "type": "miscellaneous"
     },
     "basket": {
         "name": "Basket",
-        "weight": "2"
+        "weight": "2",
+        "type": "miscellaneous"
     },
     "bedroll": {
         "name": "Bedroll",
-        "weight": "7"
+        "weight": "7",
+        "type": "miscellaneous"
     },
     "bell": {
         "name": "Bell",
-        "weight": "0.1"
+        "weight": "0.1",
+        "type": "miscellaneous"
     },
     "blanket": {
         "name": "Blanket",
-        "weight": "3"
+        "weight": "3",
+        "type": "miscellaneous"
     },
     "blockAndTackle": {
         "name": "Block and tackle",
-        "weight": "5"
+        "weight": "5",
+        "type": "miscellaneous"
     },
     "book": {
         "name": "Book",
-        "weight": "5"
+        "weight": "5",
+        "type": "miscellaneous"
     },
     "glassBottle": {
         "name": "Glass bottle",
-        "weight": "2"
+        "weight": "2",
+        "type": "miscellaneous"
     },
     "bucket": {
         "name": "Bucket",
-        "weight": "2"
+        "weight": "2",
+        "type": "miscellaneous"
     },
     "caltrops": {
         "name": "Caltrops (bag of 20)",
-        "weight": "2"
+        "weight": "2",
+        "type": "miscellaneous"
     },
     "candle": {
         "name": "Candle",
-        "weight": "0.1"
+        "weight": "0.1",
+        "type": "miscellaneous"
     },
     "caseCrossbowBolt": {
         "name": "Case, crossbow bolt",
-        "weight": "1"
+        "weight": "1",
+        "type": "miscellaneous"
     },
     "caseMapOrScroll": {
         "name": "Case, map or scroll",
-        "weight": "1"
+        "weight": "1",
+        "type": "miscellaneous"
     },
     "chain": {
         "name": "Chain (10 feet)",
-        "weight": "10"
+        "weight": "10",
+        "type": "miscellaneous"
     },
     "chalk": {
         "name": "Chalk (1 piece)",
-        "weight": ".1"
+        "weight": ".1",
+        "type": "miscellaneous"
     },
     "chest": {
         "name": "Chest",
-        "weight": "25"
+        "weight": "25",
+        "type": "miscellaneous"
     },
     "climbersKit": {
         "name": "Climber's kit",
@@ -443,11 +462,13 @@
     },
     "componentPouch": {
         "name": "Component pouch",
-        "weight": "2"
+        "weight": "2",
+        "type": "miscellaneous"
     },
     "crowbar": {
         "name": "Crowbar",
-        "weight": "5"
+        "weight": "5",
+        "type": "miscellaneous"
     },
     "sprigOfMistletoe": {
         "name": "Sprig of mistletoe",
@@ -471,27 +492,33 @@
     },
     "fishingTackle": {
         "name": "Fishing tackle",
-        "weight": "4"
+        "weight": "4",
+        "type": "miscellaneous"
     },
     "flaskOrTankard": {
         "name": "Flask or tankard",
-        "weight": "1"
+        "weight": "1",
+        "type": "miscellaneous"
     },
     "grapplingHook": {
         "name": "Grappling hook",
-        "weight": "4"
+        "weight": "4",
+        "type": "miscellaneous"
     },
     "hammer": {
         "name": "Hammer",
-        "weight": "3"
+        "weight": "3",
+        "type": "miscellaneous"
     },
     "sledgeHammer": {
         "name": "Hammer, sledge",
-        "weight": "10"
+        "weight": "10",
+        "type": "miscellaneous"
     },
     "healersKit": {
         "name": "Healers kit",
-        "weight": "3"
+        "weight": "3",
+        "type": "miscellaneous"
     },
     "amulet": {
         "name": "Amulet",
@@ -510,99 +537,123 @@
     },
     "holyWater": {
         "name": "Holy water (flask)",
-        "weight": "1"
+        "weight": "1",
+        "type": "miscellaneous"
     },
     "hourglass": {
         "name": "Hourglass",
-        "weight": "1"
+        "weight": "1",
+        "type": "miscellaneous"
     },
     "huntingTrap": {
         "name": "Hunting trap",
-        "weight": "25"
+        "weight": "25",
+        "type": "miscellaneous"
     },
     "ink": {
         "name": "Ink (1 oz bottle)",
-        "weight": ".0625"
+        "weight": ".0625",
+        "type": "miscellaneous"
     },
     "inkPen": {
         "name": "Ink pen",
-        "weight": "0.01"
+        "weight": "0.01",
+        "type": "miscellaneous"
     },
     "jugOrPitcher": {
         "name": "Jug or pitcher",
-        "weight": "4"
+        "weight": "4",
+        "type": "miscellaneous"
     },
     "ladder": {
         "name": "Ladder (10-foot)",
-        "weight": "25"
+        "weight": "25",
+        "type": "miscellaneous"
     },
     "lamp": {
         "name": "Lamp",
-        "weight": "1"
+        "weight": "1",
+        "type": "miscellaneous"
     },
     "lanternBullseye": {
         "name": "Lantern, bullseye",
-        "weight": "2"
+        "weight": "2",
+        "type": "miscellaneous"
     },
     "lanternHooded": {
         "name": "Lantern, hooded",
-        "weight": "2"
+        "weight": "2",
+        "type": "miscellaneous"
     },
     "lock": {
         "name": "Lock",
-        "weight": "1"
+        "weight": "1",
+        "type": "miscellaneous"
     },
     "magnifyingGlass": {
         "name": "Magnifying glass",
-        "weight": "0.1"
+        "weight": "0.1",
+        "type": "miscellaneous"
     },
     "manacles": {
         "name": "Manacles",
-        "weight": "6"
+        "weight": "6",
+        "type": "miscellaneous"
     },
     "messKit": {
         "name": "Mess kit",
-        "weight": "1"
+        "weight": "1",
+        "type": "miscellaneous"
     },
     "mirrorSteel": {
         "name": "Mirror, steel",
-        "weight": "3"
+        "weight": "3",
+        "type": "miscellaneous"
     },
     "oil": {
         "name": "Oil (flask)",
-        "weight": "1"
+        "weight": "1",
+        "type": "miscellaneous"
     },
     "paper": {
         "name": "Paper (one sheet)",
-        "weight": "0.014"
+        "weight": "0.014",
+        "type": "miscellaneous"
     },
     "parchment": {
         "name": "Parchment (one sheet)",
-        "weight": "0.014"
+        "weight": "0.014",
+        "type": "miscellaneous"
     },
     "perfume": {
         "name": "Perfume (vial)",
-        "weight": "0.1"
+        "weight": "0.1",
+        "type": "miscellaneous"
     },
     "pickMiners": {
         "name": "Pick, miner's",
-        "weight": "10"
+        "weight": "10",
+        "type": "miscellaneous"
     },
     "piton": {
         "name": "Piton",
-        "weight": "0.25"
+        "weight": "0.25",
+        "type": "miscellaneous"
     },
     "basicPoison": {
         "name": "Poison, basic (vial)",
-        "weight": "0.1"
+        "weight": "0.1",
+        "type": "miscellaneous"
     },
     "pole": {
         "name": "Pole (10-foot)",
-        "weight": "7"
+        "weight": "7",
+        "type": "miscellaneous"
     },
     "potIron": {
         "name": "Pot, iron",
-        "weight": "10"
+        "weight": "10",
+        "type": "miscellaneous"
     },
     "potionOfHealing": {
         "name": "Potion of healing",
@@ -611,19 +662,23 @@
     },
     "pouch": {
         "name": "Pouch",
-        "weight": "1"
+        "weight": "1",
+        "type": "miscellaneous"
     },
     "quiver": {
         "name": "Quiver",
-        "weight": "1"
+        "weight": "1",
+        "type": "miscellaneous"
     },
-    "Ram, portable": {
+    "ramPortable": {
         "name": "Ram, portable",
-        "weight": "35"
+        "weight": "35",
+        "type": "miscellaneous"
     },
     "rations": {
         "name": "Rations (1 day)",
-        "weight": "2"
+        "weight": "2",
+        "type": "miscellaneous"
     },
     "robes": {
         "name": "Robes",
@@ -632,75 +687,93 @@
     },
     "ropeHempen": {
         "name": "Rope, hempen (50 feet)",
-        "weight": "10"
+        "weight": "10",
+        "type": "miscellaneous"
     },
     "ropeSilk": {
         "name": "Rope, silk (50 feet)",
-        "weight": "5"
+        "weight": "5",
+        "type": "miscellaneous"
     },
     "sack": {
         "name": "Sack",
-        "weight": "0.5"
+        "weight": "0.5",
+        "type": "miscellaneous"
     },
     "scaleMerchants": {
         "name": "Scale, merchant's",
-        "weight": "3"
+        "weight": "3",
+        "type": "miscellaneous"
     },
     "sealingWax": {
         "name": "Sealing wax",
-        "weight": "0.01"
+        "weight": "0.01",
+        "type": "miscellaneous"
     },
     "shovel": {
         "name": "Shovel",
-        "weight": "5"
+        "weight": "5",
+        "type": "miscellaneous"
     },
     "signalWhistle": {
         "name": "Signal whistle",
-        "weight": "0.05"
+        "weight": "0.05",
+        "type": "miscellaneous"
     },
     "signetRing": {
         "name": "Signet ring",
-        "weight": "0.05"
+        "weight": "0.05",
+        "type": "miscellaneous"
     },
     "soap": {
         "name": "Soap",
-        "weight": "0.01"
+        "weight": "0.01",
+        "type": "miscellaneous"
     },
     "spellbook": {
         "name": "Spellbook",
-        "weight": "3"
+        "weight": "3",
+        "type": "miscellaneous"
     },
     "spikesIron": {
         "name": "Spikes, iron",
-        "weight": "0.5"
+        "weight": "0.5",
+        "type": "miscellaneous"
     },
     "spyglass": {
         "name": "Spyglass",
-        "weight": "1"
+        "weight": "1",
+        "type": "miscellaneous"
     },
     "tentTwoPerson": {
         "name": "Tent, two-person",
-        "weight": "20"
+        "weight": "20",
+        "type": "miscellaneous"
     },
     "tinderbox": {
         "name": "Tinderbox",
-        "weight": "1"
+        "weight": "1",
+        "type": "miscellaneous"
     },
     "torch": {
         "name": "Torch",
-        "weight": "1"
+        "weight": "1",
+        "type": "miscellaneous"
     },
     "vial": {
         "name": "Vial",
-        "weight": "0.01"
+        "weight": "0.01",
+        "type": "miscellaneous"
     },
     "waterskin": {
         "name": "Waterskin",
-        "weight": "5"
+        "weight": "5",
+        "type": "miscellaneous"
     },
     "whetstone": {
         "name": "Whetstone",
-        "weight": "1"
+        "weight": "1",
+        "type": "miscellaneous"
     },
     "alchemistsSupplies": {
         "name": "Alchemist's supplies",
@@ -878,6 +951,7 @@
     },
     "thievesTools": {
         "name": "Thieves' tools",
-        "weight": "5"
+        "weight": "5",
+        "type": "miscellaneous"
     }
 }
