@@ -1,0 +1,347 @@
+{
+    "padded": {
+        "name": "Padded",
+        "weight": "8",
+        "type": "armor",
+        "class": "light"
+    },
+    "leather": {
+        "name": "Leather",
+        "weight": "10",
+        "type": "armor",
+        "class": "light"
+    },
+    "studdedLeather": {
+        "name": "Studded Leather",
+        "weight": "13",
+        "type": "armor",
+        "class": "light"
+    },"hide": {
+        "name": "Hide",
+        "weight": "12",
+        "type": "armor",
+        "class": "medium"
+    },"chainShirt": {
+        "name": "Chain Shirt",
+        "weight": "20",
+        "type": "armor",
+        "class": "medium"
+    },"scaleMail": {
+        "name": "Scail Mail",
+        "weight": "45",
+        "type": "armor",
+        "class": "medium"
+    },"breastPlate": {
+        "name": "Breast Plate",
+        "weight": "20",
+        "type": "armor",
+        "class": "medium"
+    },"halfPlate": {
+        "name": "Half Plate",
+        "weight": "40",
+        "type": "armor",
+        "class": "medium"
+    },"ringMail": {
+        "name": "Ring Chain",
+        "weight": "40",
+        "type": "armor",
+        "class": "heavy"
+    },"chainMail": {
+        "name": "chainMail",
+        "weight": "55",
+        "type": "armor",
+        "class": "heavy"
+    },"splint": {
+        "name": "Splint",
+        "weight": "60",
+        "type": "armor",
+        "class": "heavy"
+    },"plate": {
+        "name": "Plate",
+        "weight": "65",
+        "type": "armor",
+        "class": "heavy"
+    },
+    "shield": {
+        "name": "Shield",
+        "weight": "6",
+        "type": "armor"
+    },
+    "club": {
+        "name": "Club",
+        "weight": "2",
+        "type": "weapon",
+        "class": "simple_melee"
+    },
+    "dagger": {
+        "name": "Dagger",
+        "weight": "1",
+        "type": "weapon",
+        "class": "simple_melee"
+    },
+    "greatClub": {
+        "name": "Great Club",
+        "weight": "10",
+        "type": "weapon",
+        "class": "simple_melee"
+    },
+    "handaxe": {
+        "name": "Handaxe",
+        "weight": "2",
+        "type": "weapon",
+        "class": "simple_melee"
+    },
+    "javelin": {
+        "name": "Javelin",
+        "weight": "2",
+        "type": "weapon",
+        "class": "simple_melee"
+    },
+    "lightHammer": {
+        "name": "Light Hammer",
+        "weight": "2",
+        "type": "weapon",
+        "class": "simple_melee"
+    },
+    "mace": {
+        "name": "Mace",
+        "weight": "4",
+        "type": "weapon",
+        "class": "simple_melee"
+    },
+    "quarterstaff": {
+        "name": "Quarterstaff",
+        "weight": "4",
+        "type": "weapon",
+        "class": "simple_melee"
+    },
+    "sickle": {
+        "name": "Sickle",
+        "weight": "2",
+        "type": "weapon",
+        "class": "simple_melee"
+    },
+    "spear": {
+        "name": "Spear",
+        "weight": "3",
+        "type": "weapon",
+        "class": "simple_melee"
+    },
+    "lightCrossbow": {
+        "name": "Light Crossbow",
+        "weight": "5",
+        "type": "weapon",
+        "class": "simple_ranged"
+    },
+    "dart": {
+        "name": "Dart",
+        "weight": "0.25",
+        "type": "weapon",
+        "class": "simple_ranged"
+    },
+    "shortbow": {
+        "name": "Shortbow",
+        "weight": "2",
+        "type": "weapon",
+        "class": "simple_ranged"
+    },
+    "battleaxe": {
+        "name": "Battleaxe",
+        "weight": "4",
+        "type": "weapon",
+        "class": "martial_melee"
+    },
+    "flail": {
+        "name": "Flail",
+        "weight": "2",
+        "type": "weapon",
+        "class": "martial_melee"
+    },
+    "glaive": {
+        "name": "Glaive",
+        "weight": "6",
+        "type": "weapon",
+        "class": "martial_melee"
+    },
+    "greataxe": {
+        "name": "Greataxe",
+        "weight": "7",
+        "type": "weapon",
+        "class": "martial_melee"
+    },
+    "greatsword": {
+        "name": "Greatsword",
+        "weight": "6",
+        "type": "weapon",
+        "class": "martial_melee"
+    },
+    "halberd": {
+        "name": "Halberd",
+        "weight": "6",
+        "type": "weapon",
+        "class": "martial_melee"
+    },
+    "lance": {
+        "name": "Lance",
+        "weight": "6",
+        "type": "weapon",
+        "class": "martial_melee"
+    },
+    "longsword": {
+        "name": "Longsword",
+        "weight": "3",
+        "type": "weapon",
+        "class": "martial_melee"
+    },
+    "maul": {
+        "name": "Maul",
+        "weight": "10",
+        "type": "weapon",
+        "class": "martial_melee"
+    },
+    "morningstar": {
+        "name": "Morningstar",
+        "weight": "4",
+        "type": "weapon",
+        "class": "martial_melee"
+    },
+    "pike": {
+        "name": "Pike",
+        "weight": "18",
+        "type": "weapon",
+        "class": "martial_melee"
+    },
+    "rapier": {
+        "name": "Rapier",
+        "weight": "2",
+        "type": "weapon",
+        "class": "martial_melee"
+    },
+    "scimitar": {
+        "name": "Scimitar",
+        "weight": "3",
+        "type": "weapon",
+        "class": "martial_melee"
+    },
+    "shortsword": {
+        "name": "Shortsword",
+        "weight": "2",
+        "type": "weapon",
+        "class": "martial_melee"
+    },
+    "trident": {
+        "name": "Trident",
+        "weight": "4",
+        "type": "weapon",
+        "class": "martial_melee"
+    },
+    "warPick": {
+        "name": "War pick",
+        "weight": "2",
+        "type": "weapon",
+        "class": "martial_melee"
+    },
+    "warhammer": {
+        "name": "Warhammer",
+        "weight": "2",
+        "type": "weapon",
+        "class": "martial_melee"
+    },
+    "whip": {
+        "name": "Whip",
+        "weight": "3",
+        "type": "weapon",
+        "class": "martial_melee"
+    },
+    "blowgun": {
+        "name": "Blowgun",
+        "weight": "1",
+        "type": "weapon",
+        "class": "martial_ranged"
+    },
+    "handCrossbow": {
+        "name": "Hand Crossbow",
+        "weight": "3",
+        "type": "weapon",
+        "class": "martial_ranged"
+    },
+    "heavyCrossbow": {
+        "name": "Heavy Crossbow",
+        "weight": "18",
+        "type": "weapon",
+        "class": "martial_ranged"
+    },
+    "longbow": {
+        "name": "Longbow",
+        "weight": "2",
+        "type": "weapon",
+        "class": "martial_ranged"
+    },
+    "net": {
+        "name": "Net",
+        "weight": "3",
+        "type": "weapon",
+        "class": "martial_ranged"
+    },
+    "abacus": {
+        "name": "Abacus",
+        "weight": "2"
+    },
+    "acidVial": {
+        "name": "Acid (vial)",
+        "weight": "2"
+    },
+    "alchemistFire": {
+        "name": "Alchemist fire",
+        "weight": "1"
+    },
+    "arrow": {
+        "name": "Arrow",
+        "weight": "0.05",
+        "type": "ammunition"
+    },
+    "blowgunNeedle": {
+        "name": "Blowgun needle",
+        "weight": "0.02",
+        "type": "ammunition"
+    },
+    "crossbowBolt": {
+        "name": "Crossbow bolt",
+        "weight": "0.075",
+        "type": "ammunition"
+    },
+    "slingBullet": {
+        "name": "Sling bullet",
+        "weight": "0.075",
+        "type": "ammunition"
+    },
+    "antitoxinVial": {
+        "name": "Antitoxin (vial)",
+        "weight": "0.1"
+    },
+    "crystal": {
+        "name": "Crystal",
+        "weight": "1",
+        "type": "arcane_focus"
+    },
+    "orb": {
+        "name": "Orb",
+        "weight": "3",
+        "type": "arcane_focus"
+    },
+    "rod": {
+        "name": "Rod",
+        "weight": "2",
+        "type": "arcane_focus"
+    },
+    "staff": {
+        "name": "Staff",
+        "weight": "4",
+        "type": "arcane_focus"
+    },
+    "wand": {
+        "name": "Wand",
+        "weight": "1",
+        "type": "arcane_focus"
+    }
+}

@@ -5,9 +5,12 @@ angular.module("carryingCapacity")
     $scope.currentArmor = [];
     $scope.currentPotions = [];
     $scope.load = 0;
-    $scope.itemList = [{name: "Sword", weight: 5, type: "weapon"}, 
-                       {name: "Shield", weight: 10, type: "armor"}, 
-                       {name: "Potion", weight: 1, type: "potion"}];
+    $scope.itemList = [{name: "Pike", weight: 18, type: "weapon"},
+                       {name: "Crossbow, heavy", weight: 18, type: "weapon"},
+                       {name: "Plate", weight: 65, type: "armor"}, 
+                       {name: "Shield", weight: 6, type: "armor"}, 
+                       {name: "Potion of Healing", weight: 0.5, type: "potion"},
+                       {name: "Potion of Growth", weight: 0.5, type: "potion"}];
 
     function findWeapons() {
         $scope.currentWeapons = $scope.currentItems.filter(function(item) {
