@@ -343,5 +343,540 @@
         "name": "Wand",
         "weight": "1",
         "type": "arcane_focus"
+    },
+    "backpack": {
+        "name": "Backpack",
+        "weight": "5"
+    },
+    "ballBearings": {
+        "name": "Ball bearings (bag of 1,000)",
+        "weight": "2"
+    },
+    "barrel": {
+        "name": "Barrel",
+        "weight": "70"
+    },
+    "basket": {
+        "name": "Basket",
+        "weight": "2"
+    },
+    "bedroll": {
+        "name": "Bedroll",
+        "weight": "7"
+    },
+    "bell": {
+        "name": "Bell",
+        "weight": "0.1"
+    },
+    "blanket": {
+        "name": "Blanket",
+        "weight": "3"
+    },
+    "blockAndTackle": {
+        "name": "Block and tackle",
+        "weight": "5"
+    },
+    "book": {
+        "name": "Book",
+        "weight": "5"
+    },
+    "glassBottle": {
+        "name": "Glass bottle",
+        "weight": "2"
+    },
+    "bucket": {
+        "name": "Bucket",
+        "weight": "2"
+    },
+    "caltrops": {
+        "name": "Caltrops (bag of 20)",
+        "weight": "2"
+    },
+    "candle": {
+        "name": "Candle",
+        "weight": "0.1"
+    },
+    "caseCrossbowBolt": {
+        "name": "Case, crossbow bolt",
+        "weight": "1"
+    },
+    "caseMapOrScroll": {
+        "name": "Case, map or scroll",
+        "weight": "1"
+    },
+    "chain": {
+        "name": "Chain (10 feet)",
+        "weight": "10"
+    },
+    "chalk": {
+        "name": "Chalk (1 piece)",
+        "weight": ".1"
+    },
+    "chest": {
+        "name": "Chest",
+        "weight": "25"
+    },
+    "climbersKit": {
+        "name": "Climber's kit",
+        "weight": "12"
+    },
+    "commonClothing": {
+        "name": "Common",
+        "weight": "3",
+        "type": "clothing"
+    },
+    "costumeClothing": {
+        "name": "Costume",
+        "weight": "4",
+        "type": "clothing"
+    },
+    "fineClothing": {
+        "name": "Fine",
+        "weight": "6",
+        "type": "clothing"
+    },
+    "travelersClothing": {
+        "name": "Travelers",
+        "weight": "4",
+        "type": "clothing"
+    },
+    "componentPouch": {
+        "name": "Component pouch",
+        "weight": "2"
+    },
+    "crowbar": {
+        "name": "Crowbar",
+        "weight": "5"
+    },
+    "sprigOfMistletoe": {
+        "name": "Sprig of mistletoe",
+        "weight": "0.1",
+        "type": "druidic_focus"
+    },
+    "totem": {
+        "name": "Totem",
+        "weight": "0.1",
+        "type": "druidic_focus"
+    },
+    "woodenStaff": {
+        "name": "Wooden staff",
+        "weight": "4",
+        "type": "druidic_focus"
+    },
+    "yewWand": {
+        "name": "Yew wand",
+        "weight": "1",
+        "type": "druidic_focus"
+    },
+    "fishingTackle": {
+        "name": "Fishing tackle",
+        "weight": "4"
+    },
+    "flaskOrTankard": {
+        "name": "Flask or tankard",
+        "weight": "1"
+    },
+    "grapplingHook": {
+        "name": "Grappling hook",
+        "weight": "4"
+    },
+    "hammer": {
+        "name": "Hammer",
+        "weight": "3"
+    },
+    "sledgeHammer": {
+        "name": "Hammer, sledge",
+        "weight": "10"
+    },
+    "healersKit": {
+        "name": "Healers kit",
+        "weight": "3"
+    },
+    "amulet": {
+        "name": "Amulet",
+        "weight": "1",
+        "type": "holy_symbol"
+    },
+    "emblem": {
+        "name": "Emblem",
+        "weight": "0.1",
+        "type": "holy_symbol"
+    },
+    "reliquary": {
+        "name": "Reliquary",
+        "weight": "2",
+        "type": "holy_symbol"
+    },
+    "holyWater": {
+        "name": "Holy water (flask)",
+        "weight": "1"
+    },
+    "hourglass": {
+        "name": "Hourglass",
+        "weight": "1"
+    },
+    "huntingTrap": {
+        "name": "Hunting trap",
+        "weight": "25"
+    },
+    "ink": {
+        "name": "Ink (1 oz bottle)",
+        "weight": ".0625"
+    },
+    "inkPen": {
+        "name": "Ink pen",
+        "weight": "0.01"
+    },
+    "jugOrPitcher": {
+        "name": "Jug or pitcher",
+        "weight": "4"
+    },
+    "ladder": {
+        "name": "Ladder (10-foot)",
+        "weight": "25"
+    },
+    "lamp": {
+        "name": "Lamp",
+        "weight": "1"
+    },
+    "lanternBullseye": {
+        "name": "Lantern, bullseye",
+        "weight": "2"
+    },
+    "lanternHooded": {
+        "name": "Lantern, hooded",
+        "weight": "2"
+    },
+    "lock": {
+        "name": "Lock",
+        "weight": "1"
+    },
+    "magnifyingGlass": {
+        "name": "Magnifying glass",
+        "weight": "0.1"
+    },
+    "manacles": {
+        "name": "Manacles",
+        "weight": "6"
+    },
+    "messKit": {
+        "name": "Mess kit",
+        "weight": "1"
+    },
+    "mirrorSteel": {
+        "name": "Mirror, steel",
+        "weight": "3"
+    },
+    "oil": {
+        "name": "Oil (flask)",
+        "weight": "1"
+    },
+    "paper": {
+        "name": "Paper (one sheet)",
+        "weight": "0.014"
+    },
+    "parchment": {
+        "name": "Parchment (one sheet)",
+        "weight": "0.014"
+    },
+    "perfume": {
+        "name": "Perfume (vial)",
+        "weight": "0.1"
+    },
+    "pickMiners": {
+        "name": "Pick, miner's",
+        "weight": "10"
+    },
+    "piton": {
+        "name": "Piton",
+        "weight": "0.25"
+    },
+    "basicPoison": {
+        "name": "Poison, basic (vial)",
+        "weight": "0.1"
+    },
+    "pole": {
+        "name": "Pole (10-foot)",
+        "weight": "7"
+    },
+    "potIron": {
+        "name": "Pot, iron",
+        "weight": "10"
+    },
+    "potionOfHealing": {
+        "name": "Potion of healing",
+        "weight": "0.5",
+        "type": "potion"
+    },
+    "pouch": {
+        "name": "Pouch",
+        "weight": "1"
+    },
+    "quiver": {
+        "name": "Quiver",
+        "weight": "1"
+    },
+    "Ram, portable": {
+        "name": "Ram, portable",
+        "weight": "35"
+    },
+    "rations": {
+        "name": "Rations (1 day)",
+        "weight": "2"
+    },
+    "robes": {
+        "name": "Robes",
+        "weight": "4",
+        "type": "clothing"
+    },
+    "ropeHempen": {
+        "name": "Rope, hempen (50 feet)",
+        "weight": "10"
+    },
+    "ropeSilk": {
+        "name": "Rope, silk (50 feet)",
+        "weight": "5"
+    },
+    "sack": {
+        "name": "Sack",
+        "weight": "0.5"
+    },
+    "scaleMerchants": {
+        "name": "Scale, merchant's",
+        "weight": "3"
+    },
+    "sealingWax": {
+        "name": "Sealing wax",
+        "weight": "0.01"
+    },
+    "shovel": {
+        "name": "Shovel",
+        "weight": "5"
+    },
+    "signalWhistle": {
+        "name": "Signal whistle",
+        "weight": "0.05"
+    },
+    "signetRing": {
+        "name": "Signet ring",
+        "weight": "0.05"
+    },
+    "soap": {
+        "name": "Soap",
+        "weight": "0.01"
+    },
+    "spellbook": {
+        "name": "Spellbook",
+        "weight": "3"
+    },
+    "spikesIron": {
+        "name": "Spikes, iron",
+        "weight": "0.5"
+    },
+    "spyglass": {
+        "name": "Spyglass",
+        "weight": "1"
+    },
+    "tentTwoPerson": {
+        "name": "Tent, two-person",
+        "weight": "20"
+    },
+    "tinderbox": {
+        "name": "Tinderbox",
+        "weight": "1"
+    },
+    "torch": {
+        "name": "Torch",
+        "weight": "1"
+    },
+    "vial": {
+        "name": "Vial",
+        "weight": "0.01"
+    },
+    "waterskin": {
+        "name": "Waterskin",
+        "weight": "5"
+    },
+    "whetstone": {
+        "name": "Whetstone",
+        "weight": "1"
+    },
+    "alchemistsSupplies": {
+        "name": "Alchemist's supplies",
+        "weight": "8",
+        "type": "artisans_tools"
+    },
+    "brewersSupplies": {
+        "name": "Brewer's supplies",
+        "weight": "9",
+        "type": "artisans_tools"
+    },
+    "caligraphersSupplies": {
+        "name": "Caligrapher's supplies",
+        "weight": "5",
+        "type": "artisans_tools"
+    },
+    "carpentersTools": {
+        "name": "Carpenter's tools",
+        "weight": "6",
+        "type": "artisans_tools"
+    },
+    "cartographersTools": {
+        "name": "Cartographer's tools",
+        "weight": "6",
+        "type": "artisans_tools"
+    },
+    "cobblersTools": {
+        "name": "Cobbler's tools",
+        "weight": "5",
+        "type": "artisans_tools"
+    },
+    "cooksUtensils": {
+        "name": "Cook's utensils",
+        "weight": "8",
+        "type": "artisans_tools"
+    },
+    "glassblowersTools": {
+        "name": "Glassblower's tools",
+        "weight": "5",
+        "type": "artisans_tools"
+    },
+    "jewelersTools": {
+        "name": "Jeweler's tools",
+        "weight": "2",
+        "type": "artisans_tools"
+    },
+    "leatherworkersTools": {
+        "name": "Leatherworker's tools",
+        "weight": "5",
+        "type": "artisans_tools"
+    },
+    "masonsTools": {
+        "name": "Mason's tools",
+        "weight": "8",
+        "type": "artisans_tools"
+    },
+    "paintersSupplies": {
+        "name": "Painter's supplies",
+        "weight": "5",
+        "type": "artisans_tools"
+    },
+    "pottersTools": {
+        "name": "Potter's tools",
+        "weight": "3",
+        "type": "artisans_tools"
+    },
+    "smithsTools": {
+        "name": "Smith's tools",
+        "weight": "8",
+        "type": "artisans_tools"
+    },
+    "tinkersTools": {
+        "name": "Tinker's tools",
+        "weight": "10",
+        "type": "artisans_tools"
+    },
+    "weaversTools": {
+        "name": "Weaver's tools",
+        "weight": "5",
+        "type": "artisans_tools"
+    },
+    "woodcarversTools": {
+        "name": "Woodcarver's tools",
+        "weight": "5",
+        "type": "artisans_tools"
+    },
+    "disguiseKit": {
+        "name": "Disguise kit",
+        "weight": "3",
+        "type": "kit"
+    },
+    "forgeryKit": {
+        "name": "Forgery kit",
+        "weight": "5",
+        "type": "kit"
+    },
+    "diceSet": {
+        "name": "Dice set",
+        "weight": "0.05",
+        "type": "gaming_set"
+    },
+    "dragonchessSet": {
+        "name": "Dragonchess set",
+        "weight": "0.5",
+        "type": "gaming_set"
+    },
+    "playersCareSet": {
+        "name": "Playing card set",
+        "weight": "0.1",
+        "type": "gaming_set"
+    },
+    "threeDragonAnteSet": {
+        "name": "Three-Dragon Ante set",
+        "weight": "0.1",
+        "type": "gaming_set"
+    },
+    "bagpipes": {
+        "name": "Bagpipes",
+        "weight": "6",
+        "type": "musical_instrument"
+    },
+    "drum": {
+        "name": "Drum",
+        "weight": "3",
+        "type": "musical_instrument"
+    },
+    "dulcimer": {
+        "name": "Dulcimer",
+        "weight": "10",
+        "type": "musical_instrument"
+    },
+    "flute": {
+        "name": "Flute",
+        "weight": "1",
+        "type": "musical_instrument"
+    },
+    "lute": {
+        "name": "Lute",
+        "weight": "2",
+        "type": "musical_instrument"
+    },
+    "lyre": {
+        "name": "Lyre",
+        "weight": "2",
+        "type": "musical_instrument"
+    },
+    "horn": {
+        "name": "Horn",
+        "weight": "2",
+        "type": "musical_instrument"
+    },
+    "panFlute": {
+        "name": "Pan flute",
+        "weight": "2",
+        "type": "musical_instrument"
+    },
+    "shawm": {
+        "name": "Shawm",
+        "weight": "1",
+        "type": "musical_instrument"
+    },
+    "viol": {
+        "name": "Viol",
+        "weight": "1",
+        "type": "musical_instrument"
+    },
+    "navigatorsTools": {
+        "name": "Navigator's tools",
+        "weight": "2"
+    },
+    "poisonersKit": {
+        "name": "Poisoner's kit",
+        "weight": "2",
+        "type": "kit"
+    },
+    "thievesTools": {
+        "name": "Thieves' tools",
+        "weight": "5"
     }
 }
