@@ -28,40 +28,43 @@
         Current Items: 
         <select>
             <optgroup label="Weapons">
-                    <option value="{{weapon.name}}" ng-repeat="weapon in currentWeapons track by $index">{{weapon.name}} - {{weapon.weight}} lbs</option>
+                    <option value="{{weapon.name}}" ng-repeat="weapon in currentItems.weapon track by $index">{{weapon.name}} - {{weapon.weight}} lbs</option>
             </optgroup>
             <optgroup label="Armor">
-                    <option value="{{armor.name}}" ng-repeat="armor in currentArmor track by $index">{{armor.name}} - {{armor.weight}} lbs</option>
+                    <option value="{{armor.name}}" ng-repeat="armor in currentItems.armor track by $index">{{armor.name}} - {{armor.weight}} lbs</option>
             </optgroup>
             <optgroup label="Potions">
-                    <option value="{{potion.name}}" ng-repeat="potion in currentPotions track by $index">{{potion.name}} - {{potion.weight}} lbs</option>
+                    <option value="{{potion.name}}" ng-repeat="potion in currentItems.potion track by $index">{{potion.name}} - {{potion.weight}} lbs</option>
             </optgroup>
             <optgroup label="Ammunition">
-                <option value="{{ammo.name}}" ng-repeat="ammo in currentAmmunition track by $index">{{ammo.name}} - {{ammo.weight}} lbs</option>
+                <option value="{{ammo.name}}" ng-repeat="ammo in currentItems.ammunition track by $index">{{ammo.name}} - {{ammo.weight}} lbs</option>
             </optgroup>
             <optgroup label="Clothing">
-                <option value="{{article.name}}" ng-repeat="article in currentClothing track by $index">{{article.name}} - {{article.weight}} lbs</option>
+                <option value="{{article.name}}" ng-repeat="article in currentItems.clothing track by $index">{{article.name}} - {{article.weight}} lbs</option>
             </optgroup>
             <optgroup label="Arcane Focus">
-                <option value="{{focus.name}}" ng-repeat="focus in currentArcaneFocus track by $index">{{focus.name}} - {{focus.weight}} lbs</option>
+                <option value="{{focus.name}}" ng-repeat="focus in currentItems.arcane_focus track by $index">{{focus.name}} - {{focus.weight}} lbs</option>
             </optgroup>
             <optgroup label="Druidic Focus">
-                <option value="{{focus.name}}" ng-repeat="focus in currentDruidicFocus track by $index">{{focus.name}} - {{focus.weight}} lbs</option>
+                <option value="{{focus.name}}" ng-repeat="focus in currentItems.druidic_focus track by $index">{{focus.name}} - {{focus.weight}} lbs</option>
             </optgroup>
             <optgroup label="Holy Symbol">
-                <option value="{{symbol.name}}" ng-repeat="symbol in currentHolySymbols track by $index">{{symbol.name}} - {{symbol.weight}} lbs</option>
+                <option value="{{symbol.name}}" ng-repeat="symbol in currentItems.holy_symbol track by $index">{{symbol.name}} - {{symbol.weight}} lbs</option>
             </optgroup>
             <optgroup label="Artisans Tools">
-                <option value="{{tool.name}}" ng-repeat="tool in currentArtisansTools track by $index">{{tool.name}} - {{tool.weight}} lbs</option>
+                <option value="{{tool.name}}" ng-repeat="tool in currentItems.artisans_tools track by $index">{{tool.name}} - {{tool.weight}} lbs</option>
             </optgroup>
             <optgroup label="Gaming Sets">
-                <option value="{{game.name}}" ng-repeat="game in currentGamingSets track by $index">{{game.name}} - {{game.weight}} lbs</option>
+                <option value="{{game.name}}" ng-repeat="game in currentItems.gaming_set track by $index">{{game.name}} - {{game.weight}} lbs</option>
             </optgroup>
             <optgroup label="Kits">
-                <option value="{{kit.name}}" ng-repeat="kit in currentKits track by $index">{{kit.name}} - {{kit.weight}} lbs</option>
+                <option value="{{kit.name}}" ng-repeat="kit in currentItems.kit track by $index">{{kit.name}} - {{kit.weight}} lbs</option>
             </optgroup>
             <optgroup label="Musical Instruments">
-                <option value="{{instrument.name}}" ng-repeat="instrument in currentMusicalInstruments track by $index">{{instrument.name}} - {{instrument.weight}} lbs</option>
+                <option value="{{instrument.name}}" ng-repeat="instrument in currentItems.musical_instrument track by $index">{{instrument.name}} - {{instrument.weight}} lbs</option>
+            </optgroup>
+            <optgroup label="Miscellaneous">
+                <option value="{{item.name}}" ng-repeat="item in currentItems.miscellaneous track by $index">{{item.name}} - {{item.weight}} lbs</option>
             </optgroup>
         </select>
     </div>

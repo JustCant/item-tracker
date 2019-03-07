@@ -418,7 +418,8 @@
     },
     "climbersKit": {
         "name": "Climber's kit",
-        "weight": "12"
+        "weight": "12",
+        "type": "kit"
     },
     "commonClothing": {
         "name": "Common",
