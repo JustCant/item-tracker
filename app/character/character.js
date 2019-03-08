@@ -33,7 +33,7 @@ angular.module("carryingCapacity")
     }
      
     $scope.addItem = function(item) {
-        $scope.load += parseInt(item.weight);
+        $scope.load += parseFloat(item.weight);
         assignByType($scope.currentItems, item);        
     };
 }]);
