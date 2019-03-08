@@ -42,6 +42,9 @@
   height: 80%;
   overflow: scroll;
 }
+.currentItems ul li:hover {
+  cursor: default;
+}
 .addItems {
   border: solid black 5px;
   border-radius: 8px;

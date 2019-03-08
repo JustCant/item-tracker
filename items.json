@@ -3,285 +3,341 @@
         "name": "Padded",
         "weight": "8",
         "type": "armor",
-        "class": "light"
+        "class": "light",
+        "description": "AC: 11 + Dex mod, Stealth: Disadvantage"
     },
     "leather": {
         "name": "Leather",
         "weight": "10",
         "type": "armor",
-        "class": "light"
+        "class": "light",
+        "description": "AC: 11 + Dex mod"
     },
     "studdedLeather": {
         "name": "Studded Leather",
         "weight": "13",
         "type": "armor",
-        "class": "light"
+        "class": "light",
+        "description": "AC: 12 + Dex mod"
     },"hide": {
         "name": "Hide",
         "weight": "12",
         "type": "armor",
-        "class": "medium"
+        "class": "medium",
+        "description": "AC: 12 + Dex mod (max 2)"
     },"chainShirt": {
         "name": "Chain Shirt",
         "weight": "20",
         "type": "armor",
-        "class": "medium"
+        "class": "medium",
+        "description": "AC: 13 + Dex mod (max 2), Stealth: Disadvantage"
     },"scaleMail": {
         "name": "Scail Mail",
         "weight": "45",
         "type": "armor",
-        "class": "medium"
+        "class": "medium",
+        "description": "AC: 14 + Dex mod (max 2), Stealth: Disadvantage"
     },"breastPlate": {
         "name": "Breast Plate",
         "weight": "20",
         "type": "armor",
-        "class": "medium"
+        "class": "medium",
+        "description": "AC: 14 + Dex mod (max 2)"
     },"halfPlate": {
         "name": "Half Plate",
         "weight": "40",
         "type": "armor",
-        "class": "medium"
+        "class": "medium",
+        "description": "AC: 15 + Dex mod (max 2), Stealth: Disadvantage"
     },"ringMail": {
         "name": "Ring Chain",
         "weight": "40",
         "type": "armor",
-        "class": "heavy"
+        "class": "heavy",
+        "description": "AC: 14, Stealth: Disadvantage"
     },"chainMail": {
         "name": "Chain Mail",
         "weight": "55",
         "type": "armor",
-        "class": "heavy"
+        "class": "heavy",
+        "description": "AC: 16, Min Str: 13, Stealth: Disadvantage"
     },"splint": {
         "name": "Splint",
         "weight": "60",
         "type": "armor",
-        "class": "heavy"
+        "class": "heavy",
+        "description": "AC: 17, Min Str: 15, Stealth: Disadvantage"
     },"plate": {
         "name": "Plate",
         "weight": "65",
         "type": "armor",
-        "class": "heavy"
+        "class": "heavy",
+        "description": "AC: 18, Min Str: 15, Stealth: Disadvantage"
     },
     "shield": {
         "name": "Shield",
         "weight": "6",
-        "type": "armor"
+        "type": "armor",
+        "description": "AC: +2"
     },
     "club": {
         "name": "Club",
         "weight": "2",
         "type": "weapon",
-        "class": "simple_melee"
+        "class": "simple_melee",
+        "description": "Damage: 1d4 bludgeoning, Properties: Light"
     },
     "dagger": {
         "name": "Dagger",
         "weight": "1",
         "type": "weapon",
-        "class": "simple_melee"
+        "class": "simple_melee",
+        "description": "Damage: 1d4 piercing, Properties: Finesse, light, thrown (range 20/60)"
     },
     "greatClub": {
         "name": "Great Club",
         "weight": "10",
         "type": "weapon",
-        "class": "simple_melee"
+        "class": "simple_melee",
+        "description": "Damage: 1d8 bludgeoning, Properties: Two-handed"
     },
     "handaxe": {
         "name": "Handaxe",
         "weight": "2",
         "type": "weapon",
-        "class": "simple_melee"
+        "class": "simple_melee",
+        "description": "Damage: 1d6 slashing, Properties: Light, thrown (range 20/60)"
     },
     "javelin": {
         "name": "Javelin",
         "weight": "2",
         "type": "weapon",
-        "class": "simple_melee"
+        "class": "simple_melee",
+        "description": "Damage: 1d6 piercing, Properties: Thrown (range 30/120)"
     },
     "lightHammer": {
         "name": "Light Hammer",
         "weight": "2",
         "type": "weapon",
-        "class": "simple_melee"
+        "class": "simple_melee",
+        "description": "Damage: 1d4 bludgeoning, Properties: Light, thrown (range 20/60)"
     },
     "mace": {
         "name": "Mace",
         "weight": "4",
         "type": "weapon",
-        "class": "simple_melee"
+        "class": "simple_melee",
+        "description": "Damage: 1d6 bludgeoning"
     },
     "quarterstaff": {
         "name": "Quarterstaff",
         "weight": "4",
         "type": "weapon",
-        "class": "simple_melee"
+        "class": "simple_melee",
+        "description": "Damage: 1d6 bludgeoning, Properties: Versatile (1d8)"
     },
     "sickle": {
         "name": "Sickle",
         "weight": "2",
         "type": "weapon",
-        "class": "simple_melee"
+        "class": "simple_melee",
+        "description": "Damage: 1d4 slashing, Properties: Light"
     },
     "spear": {
         "name": "Spear",
         "weight": "3",
         "type": "weapon",
-        "class": "simple_melee"
+        "class": "simple_melee",
+        "description": "Damage: 1d6 piercing, Properties: Thrown (range 20/60), versatile (1d8)"
     },
     "lightCrossbow": {
         "name": "Light Crossbow",
         "weight": "5",
         "type": "weapon",
-        "class": "simple_ranged"
+        "class": "simple_ranged",
+        "description": "Damage: 1d8 piercing, Properties: Ammunition (range 80/320), loading, two-handed"
     },
     "dart": {
         "name": "Dart",
         "weight": "0.25",
         "type": "weapon",
-        "class": "simple_ranged"
+        "class": "simple_ranged",
+        "description": "Damage: 1d4 piercing, Properties: Finesse, thrown (range 20/60)"
     },
     "shortbow": {
         "name": "Shortbow",
         "weight": "2",
         "type": "weapon",
-        "class": "simple_ranged"
+        "class": "simple_ranged",
+        "description": "Damage: 1d6 piercing, Properties: Ammunition (range 80/320), two-handed"
+    },
+    "sling": {
+        "name": "Sling",
+        "weight": "0.1",
+        "type": "weapon",
+        "class": "simple_ranged",
+        "description": "Damage: 1d4 bludgeoning, Properties: Ammunition (range 30/120)"
     },
     "battleaxe": {
         "name": "Battleaxe",
         "weight": "4",
         "type": "weapon",
-        "class": "martial_melee"
+        "class": "martial_melee",
+        "description": "Damage: 1d8 slashing, Properties: Versatile (1d10)"
     },
     "flail": {
         "name": "Flail",
         "weight": "2",
         "type": "weapon",
-        "class": "martial_melee"
+        "class": "martial_melee",
+        "description": "Damage: 1d8 bludgeoning"
     },
     "glaive": {
         "name": "Glaive",
         "weight": "6",
         "type": "weapon",
-        "class": "martial_melee"
+        "class": "martial_melee",
+        "description": "Damage: 1d10 slashing, Properties: Heavy, reach, two-handed"
     },
     "greataxe": {
         "name": "Greataxe",
         "weight": "7",
         "type": "weapon",
-        "class": "martial_melee"
+        "class": "martial_melee",
+        "description": "Damage: 1d12 slashing, Properties: Heavy, two-handed"
     },
     "greatsword": {
         "name": "Greatsword",
         "weight": "6",
         "type": "weapon",
-        "class": "martial_melee"
+        "class": "martial_melee",
+        "description": "Damage: 2d6 slashing, Properties: Heavy, two-handed"
     },
     "halberd": {
         "name": "Halberd",
         "weight": "6",
         "type": "weapon",
-        "class": "martial_melee"
+        "class": "martial_melee",
+        "description": "Damage: 1d10 slashing, Properties: Heavy, reach, two-handed"
     },
     "lance": {
         "name": "Lance",
         "weight": "6",
         "type": "weapon",
-        "class": "martial_melee"
+        "class": "martial_melee",
+        "description": "Damage: 1d12 piercing, Properties: Reach, special"
     },
     "longsword": {
         "name": "Longsword",
         "weight": "3",
         "type": "weapon",
-        "class": "martial_melee"
+        "class": "martial_melee",
+        "description": "Damage: 1d8 slashing, Properties: Versatile (1d10)"
     },
     "maul": {
         "name": "Maul",
         "weight": "10",
         "type": "weapon",
-        "class": "martial_melee"
+        "class": "martial_melee",
+        "description": "Damage: 2d6 bludgeoning, Properties: Heavy, two-handed"
     },
     "morningstar": {
         "name": "Morningstar",
         "weight": "4",
         "type": "weapon",
-        "class": "martial_melee"
+        "class": "martial_melee",
+        "description": "Damage: 1d8 piercing"
     },
     "pike": {
         "name": "Pike",
         "weight": "18",
         "type": "weapon",
-        "class": "martial_melee"
+        "class": "martial_melee",
+        "description": "Damage: 1d10 piercing, Properties: Heavy, reach, two-handed"
     },
     "rapier": {
         "name": "Rapier",
         "weight": "2",
         "type": "weapon",
-        "class": "martial_melee"
+        "class": "martial_melee",
+        "description": "Damage: 1d8 piercing, Properties: Finesse"
     },
     "scimitar": {
         "name": "Scimitar",
         "weight": "3",
         "type": "weapon",
-        "class": "martial_melee"
+        "class": "martial_melee",
+        "description": "Damage: 1d6 slashing, Properties: Finesse, light"
     },
     "shortsword": {
         "name": "Shortsword",
         "weight": "2",
         "type": "weapon",
-        "class": "martial_melee"
+        "class": "martial_melee",
+        "description": "Damage: 1d6 piercing, Properties: Finesse, light"
     },
     "trident": {
         "name": "Trident",
         "weight": "4",
         "type": "weapon",
-        "class": "martial_melee"
+        "class": "martial_melee",
+        "description": "Damage: 1d6 piercing, Properties: Thrown (range 20/60), versatile (1d8)"
     },
     "warPick": {
         "name": "War pick",
         "weight": "2",
         "type": "weapon",
-        "class": "martial_melee"
+        "class": "martial_melee",
+        "description": "Damage: 1d8 piercing"
     },
     "warhammer": {
         "name": "Warhammer",
         "weight": "2",
         "type": "weapon",
-        "class": "martial_melee"
+        "class": "martial_melee",
+        "description": "Damage: 1d8 bludgeoning, Properties: Versatile (1d10)"
     },
     "whip": {
         "name": "Whip",
         "weight": "3",
         "type": "weapon",
-        "class": "martial_melee"
+        "class": "martial_melee",
+        "description": "Damage: 1d4 slashing, Properties: Finesse, reach"
     },
     "blowgun": {
         "name": "Blowgun",
         "weight": "1",
         "type": "weapon",
-        "class": "martial_ranged"
+        "class": "martial_ranged",
+        "description": "Damage: 1 piercing, Properties: Ammunition (range 25/100), loading"
     },
     "handCrossbow": {
         "name": "Hand Crossbow",
         "weight": "3",
         "type": "weapon",
-        "class": "martial_ranged"
+        "class": "martial_ranged",
+        "description": "Damage: 1d6 piercing, Properties: Ammunition (range 30/120), light, loading"
     },
     "heavyCrossbow": {
         "name": "Heavy Crossbow",
         "weight": "18",
         "type": "weapon",
-        "class": "martial_ranged"
+        "class": "martial_ranged",
+        "description": "Damage: 1d10 piercing, Properties: Ammunition (range 100/400), heavy, loading, two-handed"
     },
     "longbow": {
         "name": "Longbow",
         "weight": "2",
         "type": "weapon",
-        "class": "martial_ranged"
+        "class": "martial_ranged",
+        "description": "Damage: 1d10 piercing, Properties: Ammunition (range 150/600), heavy, two-handed"
     },
     "net": {
         "name": "Net",
         "weight": "3",
         "type": "weapon",
-        "class": "martial_ranged"
+        "class": "martial_ranged",
+        "description": "Properties: Special, thrown (range 5/15)"
     },
     "abacus": {
         "name": "Abacus",
@@ -318,32 +374,38 @@
     "antitoxinVial": {
         "name": "Antitoxin (vial)",
         "weight": "0.1",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Advantage on saving throws against poison for 1 hour"
     },
     "crystal": {
         "name": "Crystal",
         "weight": "1",
-        "type": "arcane_focus"
+        "type": "arcane_focus",
+        "description": "Spellcasting focus"
     },
     "orb": {
         "name": "Orb",
         "weight": "3",
-        "type": "arcane_focus"
+        "type": "arcane_focus",
+        "description": "Spellcasting focus"
     },
     "rod": {
         "name": "Rod",
         "weight": "2",
-        "type": "arcane_focus"
+        "type": "arcane_focus",
+        "description": "Spellcasting focus"
     },
     "staff": {
         "name": "Staff",
         "weight": "4",
-        "type": "arcane_focus"
+        "type": "arcane_focus",
+        "description": "Spellcasting focus"
     },
     "wand": {
         "name": "Wand",
         "weight": "1",
-        "type": "arcane_focus"
+        "type": "arcane_focus",
+        "description": "Spellcasting focus"
     },
     "backpack": {
         "name": "Backpack",
@@ -353,7 +415,8 @@
     "ballBearings": {
         "name": "Ball bearings (bag of 1,000)",
         "weight": "2",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Action: DC 10 Dex saving throw or fall prone.  Half speed no check."
     },
     "barrel": {
         "name": "Barrel",
@@ -383,7 +446,8 @@
     "blockAndTackle": {
         "name": "Block and tackle",
         "weight": "5",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Pulley system allows user 4x normal lift weight."
     },
     "book": {
         "name": "Book",
@@ -403,27 +467,32 @@
     "caltrops": {
         "name": "Caltrops (bag of 20)",
         "weight": "2",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Action: Cover 5ft square, DC 15 Dex saving throw or 1 dmg + stop moving.  Movement reduced by 10ft until healed.  Half speed no check."
     },
     "candle": {
         "name": "Candle",
         "weight": "0.1",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Bright light in 5ft radius, dim light for additional 5ft."
     },
     "caseCrossbowBolt": {
         "name": "Case, crossbow bolt",
         "weight": "1",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Can hold up to 20 crossbow bolts."
     },
     "caseMapOrScroll": {
         "name": "Case, map or scroll",
         "weight": "1",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Holds 10 sheets of paper or 5 sheets of parchment."
     },
     "chain": {
         "name": "Chain (10 feet)",
         "weight": "10",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "10 HP and can be broken with DC 20 Str check."
     },
     "chalk": {
         "name": "Chalk (1 piece)",
@@ -438,7 +507,8 @@
     "climbersKit": {
         "name": "Climber's kit",
         "weight": "12",
-        "type": "kit"
+        "type": "kit",
+        "description": "Action: Anchor yourself.  Can't fall or climb beyond 25ft without moving anchor."
     },
     "commonClothing": {
         "name": "Common",
@@ -463,37 +533,44 @@
     "componentPouch": {
         "name": "Component pouch",
         "weight": "2",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Holds components used to cast spells."
     },
     "crowbar": {
         "name": "Crowbar",
         "weight": "5",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Grants advantage to Str checks where leverage can be applied."
     },
     "sprigOfMistletoe": {
         "name": "Sprig of mistletoe",
         "weight": "0.1",
-        "type": "druidic_focus"
+        "type": "druidic_focus",
+        "description": "Spellcasting focus"
     },
     "totem": {
         "name": "Totem",
         "weight": "0.1",
-        "type": "druidic_focus"
+        "type": "druidic_focus",
+        "description": "Spellcasting focus"
     },
     "woodenStaff": {
         "name": "Wooden staff",
         "weight": "4",
-        "type": "druidic_focus"
+        "type": "druidic_focus",
+        "description": "Spellcasting focus"
     },
     "yewWand": {
         "name": "Yew wand",
         "weight": "1",
-        "type": "druidic_focus"
+        "type": "druidic_focus",
+        "description": "Spellcasting focus"
     },
     "fishingTackle": {
         "name": "Fishing tackle",
         "weight": "4",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Wooden rod, silken line, corkwood bobbers, steel hooks, lead sinkers, velvet lures, and narrow netting."
     },
     "flaskOrTankard": {
         "name": "Flask or tankard",
@@ -518,27 +595,32 @@
     "healersKit": {
         "name": "Healers kit",
         "weight": "3",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Action: 10 uses.  Stabilize a creature at 0 HP without a check."
     },
     "amulet": {
         "name": "Amulet",
         "weight": "1",
-        "type": "holy_symbol"
+        "type": "holy_symbol",
+        "description": "Spellcasting focus.  Must be visible."
     },
     "emblem": {
         "name": "Emblem",
         "weight": "0.1",
-        "type": "holy_symbol"
+        "type": "holy_symbol",
+        "description": "Spellcasting focus.  Must be visible."
     },
     "reliquary": {
         "name": "Reliquary",
         "weight": "2",
-        "type": "holy_symbol"
+        "type": "holy_symbol",
+        "description": "Spellcasting focus.  Must be visible."
     },
     "holyWater": {
         "name": "Holy water (flask)",
         "weight": "1",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Action: Thrown (range 20ft).  Fiend and/or undead take 2d6 radiant damage.  Cleric or paladin can create through 1hour ritual.  Cost: 25gp worth of powdered silver and 1st-level spell slot."
     },
     "hourglass": {
         "name": "Hourglass",
@@ -548,7 +630,8 @@
     "huntingTrap": {
         "name": "Hunting trap",
         "weight": "25",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Action: DC 13 Dex saving throw or take 1d4 piercing damage and stop moving.  DC 13 Str check to free or take 1 piercing damage."
     },
     "ink": {
         "name": "Ink (1 oz bottle)",
@@ -573,37 +656,44 @@
     "lamp": {
         "name": "Lamp",
         "weight": "1",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Bright light 15ft radius and dim light for additional 30ft.  6 hours on a flask (1 pint) of oil."
     },
     "lanternBullseye": {
         "name": "Lantern, bullseye",
         "weight": "2",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Bright light in a 60ft cone and dim light for additional 60 ft.  6 hours on a flask (1 pint) of oil."
     },
     "lanternHooded": {
         "name": "Lantern, hooded",
         "weight": "2",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Bright light 30ft radius and dim light for additional 30ft.  6 hours on a flask (1 pint) of oil.  Action: lower hood reduce light to dim light 5ft radius."
     },
     "lock": {
         "name": "Lock",
         "weight": "1",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "DC 15 Dex and proficiency with thieves tools to pick."
     },
     "magnifyingGlass": {
         "name": "Magnifying glass",
         "weight": "0.1",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Grants advantage on appraise or inspect."
     },
     "manacles": {
         "name": "Manacles",
         "weight": "6",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Bind a small or medium creature.  DC 20 Dex to escape.  DC 20 Str to break.  DC 15 Dex with thieves tools to pick.  HP 15."
     },
     "messKit": {
         "name": "Mess kit",
         "weight": "1",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Contains cup and simple cutlery.  One side can be used as a cooking pan and the other as a plate or shallow bowl."
     },
     "mirrorSteel": {
         "name": "Mirror, steel",
@@ -613,7 +703,8 @@
     "oil": {
         "name": "Oil (flask)",
         "weight": "1",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Clay flask (1 pint).  Action: thrown (range 20ft).  Can cover a creature or 5ft square.  If takes fire dmg take additional 5 fire dmg.  Oil burns for 2 rounds."
     },
     "paper": {
         "name": "Paper (one sheet)",
@@ -643,7 +734,8 @@
     "basicPoison": {
         "name": "Poison, basic (vial)",
         "weight": "0.1",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Action: Coat one slashing or piercing weapon or 3 pieces of ammunition.  DC 10 Con saving throw or take 1d4 poison dmg.  Lasts for 1 minute."
     },
     "pole": {
         "name": "Pole (10-foot)",
@@ -658,27 +750,32 @@
     "potionOfHealing": {
         "name": "Potion of healing",
         "weight": "0.5",
-        "type": "potion"
+        "type": "potion",
+        "description": "Action: Regain 2d4 + 2 HP."
     },
     "pouch": {
         "name": "Pouch",
         "weight": "1",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Can hold 20 sling bullets or 50 blowgun needles, among other things."
     },
     "quiver": {
         "name": "Quiver",
         "weight": "1",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Can hold up to 20 arrows."
     },
     "ramPortable": {
         "name": "Ram, portable",
         "weight": "35",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Grants +4 to Str checks on breaking down doors.  Other characters can help and grant advantage."
     },
     "rations": {
         "name": "Rations (1 day)",
         "weight": "2",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Jerkey, dried fruit, hardtack, and nuts."
     },
     "robes": {
         "name": "Robes",
@@ -688,12 +785,14 @@
     "ropeHempen": {
         "name": "Rope, hempen (50 feet)",
         "weight": "10",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "2 HP.  DC 17 Str to burst."
     },
     "ropeSilk": {
         "name": "Rope, silk (50 feet)",
         "weight": "5",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "2 HP.  DC 17 Str to burst."
     },
     "sack": {
         "name": "Sack",
@@ -703,7 +802,8 @@
     "scaleMerchants": {
         "name": "Scale, merchant's",
         "weight": "3",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Can accuratley weigh up to 2 pounds."
     },
     "sealingWax": {
         "name": "Sealing wax",
@@ -733,7 +833,8 @@
     "spellbook": {
         "name": "Spellbook",
         "weight": "3",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Leather-bound tome with 100 blank vellum pages."
     },
     "spikesIron": {
         "name": "Spikes, iron",
@@ -743,17 +844,20 @@
     "spyglass": {
         "name": "Spyglass",
         "weight": "1",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Magnifies to twice normal size."
     },
     "tentTwoPerson": {
         "name": "Tent, two-person",
         "weight": "20",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Canvas shelter for 2."
     },
     "tinderbox": {
         "name": "Tinderbox",
         "weight": "1",
-        "type": "miscellaneous"
+        "type": "miscellaneous",
+        "description": "Action: Light a torch.  1 minute to light fire."
     },
     "torch": {
         "name": "Torch",
@@ -778,180 +882,223 @@
     "alchemistsSupplies": {
         "name": "Alchemist's supplies",
         "weight": "8",
-        "type": "artisans_tools"
+        "type": "artisans_tools",
+        "description": "Add proficiency to checks made with tools."
     },
     "brewersSupplies": {
         "name": "Brewer's supplies",
         "weight": "9",
-        "type": "artisans_tools"
+        "type": "artisans_tools",
+        "description": "Add proficiency to checks made with tools."
     },
     "caligraphersSupplies": {
         "name": "Caligrapher's supplies",
         "weight": "5",
-        "type": "artisans_tools"
+        "type": "artisans_tools",
+        "description": "Add proficiency to checks made with tools."
     },
     "carpentersTools": {
         "name": "Carpenter's tools",
         "weight": "6",
-        "type": "artisans_tools"
+        "type": "artisans_tools",
+        "description": "Add proficiency to checks made with tools."
     },
     "cartographersTools": {
         "name": "Cartographer's tools",
         "weight": "6",
-        "type": "artisans_tools"
+        "type": "artisans_tools",
+        "description": "Add proficiency to checks made with tools."
     },
     "cobblersTools": {
         "name": "Cobbler's tools",
         "weight": "5",
-        "type": "artisans_tools"
+        "type": "artisans_tools",
+        "description": "Add proficiency to checks made with tools."
     },
     "cooksUtensils": {
         "name": "Cook's utensils",
         "weight": "8",
-        "type": "artisans_tools"
+        "type": "artisans_tools",
+        "description": "Add proficiency to checks made with tools."
     },
     "glassblowersTools": {
         "name": "Glassblower's tools",
         "weight": "5",
-        "type": "artisans_tools"
+        "type": "artisans_tools",
+        "description": "Add proficiency to checks made with tools."
     },
     "jewelersTools": {
         "name": "Jeweler's tools",
         "weight": "2",
-        "type": "artisans_tools"
+        "type": "artisans_tools",
+        "description": "Add proficiency to checks made with tools."
     },
     "leatherworkersTools": {
         "name": "Leatherworker's tools",
         "weight": "5",
-        "type": "artisans_tools"
+        "type": "artisans_tools",
+        "description": "Add proficiency to checks made with tools."
     },
     "masonsTools": {
         "name": "Mason's tools",
         "weight": "8",
-        "type": "artisans_tools"
+        "type": "artisans_tools",
+        "description": "Add proficiency to checks made with tools."
     },
     "paintersSupplies": {
         "name": "Painter's supplies",
         "weight": "5",
-        "type": "artisans_tools"
+        "type": "artisans_tools",
+        "description": "Add proficiency to checks made with tools."
     },
     "pottersTools": {
         "name": "Potter's tools",
         "weight": "3",
-        "type": "artisans_tools"
+        "type": "artisans_tools",
+        "description": "Add proficiency to checks made with tools."
     },
     "smithsTools": {
         "name": "Smith's tools",
         "weight": "8",
-        "type": "artisans_tools"
+        "type": "artisans_tools",
+        "description": "Add proficiency to checks made with tools."
     },
     "tinkersTools": {
         "name": "Tinker's tools",
         "weight": "10",
-        "type": "artisans_tools"
+        "type": "artisans_tools",
+        "description": "Add proficiency to checks made with tools."
     },
     "weaversTools": {
         "name": "Weaver's tools",
         "weight": "5",
-        "type": "artisans_tools"
+        "type": "artisans_tools",
+        "description": "Add proficiency to checks made with tools."
     },
     "woodcarversTools": {
         "name": "Woodcarver's tools",
         "weight": "5",
-        "type": "artisans_tools"
+        "type": "artisans_tools",
+        "description": "Add proficiency to checks made with tools."
     },
     "disguiseKit": {
         "name": "Disguise kit",
         "weight": "3",
-        "type": "kit"
+        "type": "kit",
+        "description": "Add proficiency to disguise checks made with this kit."
     },
     "forgeryKit": {
         "name": "Forgery kit",
         "weight": "5",
-        "type": "kit"
+        "type": "kit",
+        "description": "Add proficiency to forgery checks made with this kit."
     },
     "diceSet": {
         "name": "Dice set",
         "weight": "0.05",
-        "type": "gaming_set"
+        "type": "gaming_set",
+        "description": "Add proficiency to game checks when playing this game."
     },
     "dragonchessSet": {
         "name": "Dragonchess set",
         "weight": "0.5",
-        "type": "gaming_set"
+        "type": "gaming_set",
+        "description": "Add proficiency to game checks when playing this game."
     },
     "playersCareSet": {
         "name": "Playing card set",
         "weight": "0.1",
-        "type": "gaming_set"
+        "type": "gaming_set",
+        "description": "Add proficiency to game checks when playing this game."
     },
     "threeDragonAnteSet": {
         "name": "Three-Dragon Ante set",
         "weight": "0.1",
-        "type": "gaming_set"
+        "type": "gaming_set",
+        "description": "Add proficiency to game checks when playing this game."
+    },
+    "herbalismKit": {
+        "name": "Herbalism kit",
+        "weight": "3",
+        "type": "kit",
+        "description": "Add proficiency to applying or identifying herbs.  Proficiency with this kit is required to create antitoxin and potions of healing"
     },
     "bagpipes": {
         "name": "Bagpipes",
         "weight": "6",
-        "type": "musical_instrument"
+        "type": "musical_instrument",
+        "description": "Add proficiency to ability checks to play instrument.  Spellcasting focus for Bard."
     },
     "drum": {
         "name": "Drum",
         "weight": "3",
-        "type": "musical_instrument"
+        "type": "musical_instrument",
+        "description": "Add proficiency to ability checks to play instrument.  Spellcasting focus for Bard."
     },
     "dulcimer": {
         "name": "Dulcimer",
         "weight": "10",
-        "type": "musical_instrument"
+        "type": "musical_instrument",
+        "description": "Add proficiency to ability checks to play instrument.  Spellcasting focus for Bard."
     },
     "flute": {
         "name": "Flute",
         "weight": "1",
-        "type": "musical_instrument"
+        "type": "musical_instrument",
+        "description": "Add proficiency to ability checks to play instrument.  Spellcasting focus for Bard."
     },
     "lute": {
         "name": "Lute",
         "weight": "2",
-        "type": "musical_instrument"
+        "type": "musical_instrument",
+        "description": "Add proficiency to ability checks to play instrument.  Spellcasting focus for Bard."
     },
     "lyre": {
         "name": "Lyre",
         "weight": "2",
-        "type": "musical_instrument"
+        "type": "musical_instrument",
+        "description": "Add proficiency to ability checks to play instrument.  Spellcasting focus for Bard."
     },
     "horn": {
         "name": "Horn",
         "weight": "2",
-        "type": "musical_instrument"
+        "type": "musical_instrument",
+        "description": "Add proficiency to ability checks to play instrument.  Spellcasting focus for Bard."
     },
     "panFlute": {
         "name": "Pan flute",
         "weight": "2",
-        "type": "musical_instrument"
+        "type": "musical_instrument",
+        "description": "Add proficiency to ability checks to play instrument.  Spellcasting focus for Bard."
     },
     "shawm": {
         "name": "Shawm",
         "weight": "1",
-        "type": "musical_instrument"
+        "type": "musical_instrument",
+        "description": "Add proficiency to ability checks to play instrument.  Spellcasting focus for Bard."
     },
     "viol": {
         "name": "Viol",
         "weight": "1",
-        "type": "musical_instrument"
+        "type": "musical_instrument",
+        "description": "Add proficiency to ability checks to play instrument.  Spellcasting focus for Bard."
     },
     "navigatorsTools": {
         "name": "Navigator's tools",
-        "weight": "2"
+        "weight": "2",
+        "type": "kit",
+        "description": "Chart a ship's course, follow navigation charts, and add proficiency to checks against getting lost."
     },
     "poisonersKit": {
         "name": "Poisoner's kit",
         "weight": "2",
-        "type": "kit"
+        "type": "kit",
+        "description": "Add proficiency to ability checks to craft or use poisons."
     },
     "thievesTools": {
         "name": "Thieves' tools",
         "weight": "5",
-        "type": "miscellaneous"
+        "type": "kit",
+        "description": "Add proficiency to ability checks to disarm traps or open locks."        
     }
 }
