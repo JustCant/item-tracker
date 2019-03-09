@@ -30,7 +30,6 @@ angular.module("carryingCapacity")
 
     function assignByType(list, item) {
         list[item.type].push(item);
-        $log.log(item);
     }//end assignByType
      
     $scope.addItem = function(item) {
