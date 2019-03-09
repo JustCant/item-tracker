@@ -4,81 +4,81 @@
         "weight": "8",
         "type": "armor",
         "class": "light",
-        "description": "AC: 11 + Dex mod, Stealth: Disadvantage"
+        "description": "AC: 11 + Dex mod, Stealth: Disadvantage.  Don: 1 min.  Doff: 1 min."
     },
     "leather": {
         "name": "Leather",
         "weight": "10",
         "type": "armor",
         "class": "light",
-        "description": "AC: 11 + Dex mod"
+        "description": "AC: 11 + Dex mod.  Don: 1 min.  Doff: 1 min."
     },
     "studdedLeather": {
         "name": "Studded Leather",
         "weight": "13",
         "type": "armor",
         "class": "light",
-        "description": "AC: 12 + Dex mod"
+        "description": "AC: 12 + Dex mod.  Don: 1 min.  Doff: 1 min."
     },"hide": {
         "name": "Hide",
         "weight": "12",
         "type": "armor",
         "class": "medium",
-        "description": "AC: 12 + Dex mod (max 2)"
+        "description": "AC: 12 + Dex mod (max 2).  Don: 5 min.  Doff: 1 min."
     },"chainShirt": {
         "name": "Chain Shirt",
         "weight": "20",
         "type": "armor",
         "class": "medium",
-        "description": "AC: 13 + Dex mod (max 2), Stealth: Disadvantage"
+        "description": "AC: 13 + Dex mod (max 2), Stealth: Disadvantage.  Don: 5 min.  Doff: 1 min."
     },"scaleMail": {
         "name": "Scail Mail",
         "weight": "45",
         "type": "armor",
         "class": "medium",
-        "description": "AC: 14 + Dex mod (max 2), Stealth: Disadvantage"
+        "description": "AC: 14 + Dex mod (max 2), Stealth: Disadvantage.  Don: 5 min.  Doff: 1 min."
     },"breastPlate": {
         "name": "Breast Plate",
         "weight": "20",
         "type": "armor",
         "class": "medium",
-        "description": "AC: 14 + Dex mod (max 2)"
+        "description": "AC: 14 + Dex mod (max 2).  Don: 5 min.  Doff: 1 min."
     },"halfPlate": {
         "name": "Half Plate",
         "weight": "40",
         "type": "armor",
         "class": "medium",
-        "description": "AC: 15 + Dex mod (max 2), Stealth: Disadvantage"
+        "description": "AC: 15 + Dex mod (max 2), Stealth: Disadvantage.  Don: 5 min.  Doff: 1 min."
     },"ringMail": {
         "name": "Ring Chain",
         "weight": "40",
         "type": "armor",
         "class": "heavy",
-        "description": "AC: 14, Stealth: Disadvantage"
+        "description": "AC: 14, Stealth: Disadvantage.  Don: 10 min.  Doff: 5 min."
     },"chainMail": {
         "name": "Chain Mail",
         "weight": "55",
         "type": "armor",
         "class": "heavy",
-        "description": "AC: 16, Min Str: 13, Stealth: Disadvantage"
+        "description": "AC: 16, Min Str: 13, Stealth: Disadvantage.  Don: 10 min.  Doff: 5 min."
     },"splint": {
         "name": "Splint",
         "weight": "60",
         "type": "armor",
         "class": "heavy",
-        "description": "AC: 17, Min Str: 15, Stealth: Disadvantage"
+        "description": "AC: 17, Min Str: 15, Stealth: Disadvantage.  Don: 10 min.  Doff: 5 min."
     },"plate": {
         "name": "Plate",
         "weight": "65",
         "type": "armor",
         "class": "heavy",
-        "description": "AC: 18, Min Str: 15, Stealth: Disadvantage"
+        "description": "AC: 18, Min Str: 15, Stealth: Disadvantage.  Don: 10 min.  Doff: 5 min."
     },
     "shield": {
         "name": "Shield",
         "weight": "6",
         "type": "armor",
-        "description": "AC: +2"
+        "description": "AC: +2.  Don: 1 action.  Doff: 1 action."
     },
     "club": {
         "name": "Club",
@@ -345,11 +345,13 @@
     },
     "acidVial": {
         "name": "Acid (vial)",
-        "weight": "2"
+        "weight": "2",
+        "description": "Action: Thrown (range 20ft).  Causes 2d6 acid damage."
     },
     "alchemistFire": {
         "name": "Alchemist fire",
-        "weight": "1"
+        "weight": "1",
+        "description": "Action: Thrown (range 20ft).  Causes 1d4 damage at start of each turn.  Can use action to extinguish DC 10 Dex."
     },
     "arrow": {
         "name": "Arrow",

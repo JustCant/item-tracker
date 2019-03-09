@@ -1,13 +1,13 @@
 <div class="character">
     <!--TOP ROW-->
     <div class="charName"> 
-        <input class="charNameInput" type="text" ng-model="charName">
-        <div class="charNameLabel">NAME: {{charName}}</div>
+        <input class="charNameInput" ng-mouseleave="changeName = false" ng-show="changeName" type="text" ng-model="charName" >
+        <div class="charNameLabel" ng-mouseenter="changeName = true" ng-hide="changeName">NAME: {{charName}}</div>
     </div>
 
     <div class="strScore">
-        <input class="strScoreInput" type="text" ng-model="strScore">
-        <div class="strScoreLabel">STR: {{strScore}}</div>
+        <input class="strScoreInput" ng-mouseleave="changeStr = false" ng-show="changeStr" type="text" ng-model="strScore" >
+        <div class="strScoreLabel" ng-mouseenter="changeStr = true" ng-hide="changeStr">STR: {{strScore}}</div>
     </div>  
 
     <div class="carryCapacity">
@@ -19,8 +19,8 @@
     </div>
 
     <div class="currentLoad">
-        <div>Current Load: {{load}} lbs</div>  
-        <div>Available weight: {{strScore * 15 - load}} lbs</div>
+        <div>Current Load: {{load.toFixed(2)}} lbs</div>  
+        <div>Available weight: {{(strScore * 15 - load).toFixed(2)}} lbs</div>
     </div>
 
     <!--BOTTOM ROW-->
@@ -29,55 +29,81 @@
         <div class="currentItems">
             <h4>Weapons:</h4>    
             <ul>
-                <li title="{{weapon.description}}" value="{{weapon.name}}" ng-repeat="weapon in currentItems.weapon track by $index">{{weapon.name}} - {{weapon.weight}} lbs</li>
+                <li title="{{weapon.description}}" value="{{weapon.name}}" ng-repeat="weapon in currentItems.weapon track by $index">{{weapon.name}} - {{weapon.weight}} lbs 
+                    <button ng-click="removeItem(weapon, currentItems.weapon)">REMOVE</button>
+                </li>
             </ul>
             <h4>Armor:</h4> 
             <ul>
-                <li title="{{armor.description}}" value="{{armor.name}}" ng-repeat="armor in currentItems.armor track by $index">{{armor.name}} - {{armor.weight}} lbs</li>
+                <li title="{{armor.description}}" value="{{armor.name}}" ng-repeat="armor in currentItems.armor track by $index">{{armor.name}} - {{armor.weight}} lbs x {{armor.quantity}}
+                    <button ng-click="removeItem(armor, currentItems.armor)">REMOVE</button>
+                </li>
             </ul>
             <h4>Potions:</h4>
             <ul>
-                <li title="{{potion.description}}" value="{{potion.name}}" ng-repeat="potion in currentItems.potion track by $index">{{potion.name}} - {{potion.weight}} lbs</li>
+                <li title="{{potion.description}}" value="{{potion.name}}" ng-repeat="potion in currentItems.potion track by $index">{{potion.name}} - {{potion.weight}} lbs
+                    <button ng-click="removeItem(potion, currentItems.potion)">REMOVE</button>
+                </li>
             </ul>
             <h4>Ammunition:</h4>
             <ul>
-                <li title="{{ammo.description}}" value="{{ammo.name}}" ng-repeat="ammo in currentItems.ammunition track by $index">{{ammo.name}} - {{ammo.weight}} lbs</li>
+                <li title="{{ammo.description}}" value="{{ammo.name}}" ng-repeat="ammo in currentItems.ammunition track by $index">{{ammo.name}} - {{ammo.weight}} lbs
+                    <button ng-click="removeItem(ammo, currentItems.ammunition)">REMOVE</button>
+                </li>
             </ul>
             <h4>Clothing:</h4>
             <ul>
-                <li title="{{article.description}}" value="{{article.name}}" ng-repeat="article in currentItems.clothing track by $index">{{article.name}} - {{article.weight}} lbs</li>
+                <li title="{{article.description}}" value="{{article.name}}" ng-repeat="article in currentItems.clothing track by $index">{{article.name}} - {{article.weight}} lbs
+                    <button ng-click="removeItem(article, currentItems.clothing)">REMOVE</button>
+                </li>
             </ul>
             <h4>Arcane Focus:</h4>
             <ul>
-                <li title="{{focus.description}}" value="{{focus.name}}" ng-repeat="focus in currentItems.arcane_focus track by $index">{{focus.name}} - {{focus.weight}} lbs</li>
+                <li title="{{focus.description}}" value="{{focus.name}}" ng-repeat="focus in currentItems.arcane_focus track by $index">{{focus.name}} - {{focus.weight}} lbs
+                    <button ng-click="removeItem(focus, currentItems.arcane_focus)">REMOVE</button>
+                </li>
             </ul>
             <h4>Druidic Focus:</h4>
             <ul>
-                <li title="{{focus.description}}" value="{{focus.name}}" ng-repeat="focus in currentItems.druidic_focus track by $index">{{focus.name}} - {{focus.weight}} lbs</li>
+                <li title="{{focus.description}}" value="{{focus.name}}" ng-repeat="focus in currentItems.druidic_focus track by $index">{{focus.name}} - {{focus.weight}} lbs
+                    <button ng-click="removeItem(focus, currentItems.druidic_focus)">REMOVE</button>
+                </li>
             </ul>
             <h4>Holy Symbol:</h4>
             <ul>
-                <li title="{{symbol.description}}" value="{{symbol.name}}" ng-repeat="symbol in currentItems.holy_symbol track by $index">{{symbol.name}} - {{symbol.weight}} lbs</li>
+                <li title="{{symbol.description}}" value="{{symbol.name}}" ng-repeat="symbol in currentItems.holy_symbol track by $index">{{symbol.name}} - {{symbol.weight}} lbs
+                    <button ng-click="removeItem(symbol, currentItems.holy_symbol)">REMOVE</button>
+                </li>
             </ul>
             <h4>Artisans Tools:</h4>
             <ul>
-                <li title="{{tool.description}}" value="{{tool.name}}" ng-repeat="tool in currentItems.artisans_tools track by $index">{{tool.name}} - {{tool.weight}} lbs</li>
+                <li title="{{tool.description}}" value="{{tool.name}}" ng-repeat="tool in currentItems.artisans_tools track by $index">{{tool.name}} - {{tool.weight}} lbs
+                    <button ng-click="removeItem(tool, currentItems.artisans_tools)">REMOVE</button>
+                </li>
             </ul>
             <h4>Gaming Sets:</h4>
             <ul>
-                <li title="{{game.description}}" value="{{game.name}}" ng-repeat="game in currentItems.gaming_set track by $index">{{game.name}} - {{game.weight}} lbs</li>
+                <li title="{{game.description}}" value="{{game.name}}" ng-repeat="game in currentItems.gaming_set track by $index">{{game.name}} - {{game.weight}} lbs
+                    <button ng-click="removeItem(game, currentItems.gaming_set)">REMOVE</button>
+                </li>
             </ul>
             <h4>Kits:</h4>
             <ul>
-                <li title="{{kit.description}}" value="{{kit.name}}" ng-repeat="kit in currentItems.kit track by $index">{{kit.name}} - {{kit.weight}} lbs</li>
+                <li title="{{kit.description}}" value="{{kit.name}}" ng-repeat="kit in currentItems.kit track by $index">{{kit.name}} - {{kit.weight}} lbs
+                    <button ng-click="removeItem(kit, currentItems.kit)">REMOVE</button>
+                </li>
             </ul>
             <h4>Musical Instruments:</h4>
             <ul>
-                <li title="{{instrument.description}}" value="{{instrument.name}}" ng-repeat="instrument in currentItems.musical_instrument track by $index">{{instrument.name}} - {{instrument.weight}} lbs</li>
+                <li title="{{instrument.description}}" value="{{instrument.name}}" ng-repeat="instrument in currentItems.musical_instrument track by $index">{{instrument.name}} - {{instrument.weight}} lbs
+                    <button ng-click="removeItem(instrument, currentItems.musical_instrument)">REMOVE</button>
+                </li>
             </ul>
             <h4>Miscellaneous:</h4>
             <ul>
-                <li title="{{item.description}}" value="{{item.name}}" ng-repeat="item in currentItems.miscellaneous track by $index">{{item.name}} - {{item.weight}} lbs</li>
+                <li title="{{item.description}}" value="{{item.name}}" ng-repeat="item in currentItems.miscellaneous track by $index">{{item.name}} - {{item.weight}} lbs
+                    <button ng-click="removeItem(item, currentItems.miscellaneous)">REMOVE</button>
+                </li>
             </ul>
         </div>
     </div>
