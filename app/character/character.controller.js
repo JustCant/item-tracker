@@ -5,7 +5,6 @@ angular.module("carryingCapacity")
         method: 'GET',
         url: '/items.json'
     }).then(function(response) {        
-        // $scope.itemList = response.data; 
         for(let key in response.data)                   
             $scope.itemList.push(response.data[key]);          
     });
@@ -61,13 +60,18 @@ angular.module("carryingCapacity")
     };//end addItem
 
     $scope.removeItem = function(item, array) {
+        //Remove item weight from $scope.load
         $scope.load -= parseFloat(item.weight);
+
+        //Lower item's quantity amount by 1
         item.quantity -= 1;
+
+        //If the item's quantity amount is 0 then remove it from array
         if(item.quantity === 0)    
             array.splice(array.indexOf(item), 1);
     };//end removeItem
 
     $scope.clearSearchName = function() {
         $scope.searchName = "";
-    }
+    };//end clearSearchName
 }]);
