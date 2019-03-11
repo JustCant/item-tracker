@@ -58,3 +58,6 @@
 .addItems ul li:hover {
   cursor: pointer;
 }
+.character {
+  margin-bottom: 20px;
+}
