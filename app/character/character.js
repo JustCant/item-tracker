@@ -66,4 +66,8 @@ angular.module("carryingCapacity")
         if(item.quantity === 0)    
             array.splice(array.indexOf(item), 1);
     };//end removeItem
+
+    $scope.clearSearchName = function() {
+        $scope.searchName = "";
+    }
 }]);
