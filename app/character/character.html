@@ -1,5 +1,5 @@
 <div class="character" ng-controller="charCtrl">
-    <!--TOP ROW-->
+    
     <div class="charName"> 
         <input class="charNameInput" ng-mouseleave="changeName = false" ng-show="changeName" type="text" ng-model="charName" >
         <div class="charNameLabel" ng-mouseenter="changeName = true" ng-hide="changeName">NAME: {{charName}}</div>
@@ -23,7 +23,6 @@
         <div>Available weight: {{(strScore * 15 - load).toFixed(2)}} lbs</div>
     </div>
 
-    <!--BOTTOM ROW-->
     <div class="characterItems">
         <h3>Current Items: </h3>
         <div class="currentItems">
@@ -132,5 +131,8 @@
         <ul>
             <li title="{{item.description}}" value="{{item.name}}" ng-click="addItem(item)" ng-repeat="item in itemList | filter:{'name': searchName, 'type': searchType}">{{item.name}} - {{item.weight}} lbs</li>
         </ul>
-    </div>  
+    </div> 
+    <button ng-click="saveChar(charName)">Save Character</button> 
+    <button ng-click="showItems()">Show itemlist</button>
+    <button ng-click="retrieveData()">Retrieve Data</button>
 </div>

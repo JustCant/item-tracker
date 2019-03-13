@@ -1,0 +1,20 @@
+{
+    "name": "Tork",
+    "strength": 20,
+    "items": {
+        "weapon": [],
+        "armor": [{ "name": "Padded", "weight": 8, "type": "armor", "class": "light", "description": "nothing", "quantity": 1}],
+        "potion": [],
+        "ammunition": [],
+        "clothing": [],
+        "arcane_focus": [],
+        "druidic_focus": [],
+        "holy_symbol": [],
+        "artisans_tools": [],
+        "gaming_set": [],
+        "kit": [],
+        "musical_instrument": [],
+        "miscellaneous": []
+    },
+    "load": 8
+}

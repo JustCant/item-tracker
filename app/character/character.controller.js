@@ -1,5 +1,6 @@
 angular.module("carryingCapacity")
 .controller("charCtrl", ["$scope", "$http", "$log", function($scope, $http, $log) {
+    
     $scope.itemList = [];
     $http({
         method: 'GET',
@@ -9,23 +10,47 @@ angular.module("carryingCapacity")
             $scope.itemList.push(response.data[key]);          
     });
 
-    $scope.currentItems = {
-        weapon: [],
-        armor: [],
-        potion: [],
-        ammunition: [],
-        clothing: [],
-        arcane_focus: [],
-        druidic_focus: [],
-        holy_symbol: [],
-        artisans_tools: [],
-        gaming_set: [],
-        kit: [],
-        musical_instrument: [],
-        miscellaneous: []
-    }//end currentItems
+    // $scope.currentItems = {
+    //     weapon: [],
+    //     armor: [],
+    //     potion: [],
+    //     ammunition: [],
+    //     clothing: [],
+    //     arcane_focus: [],
+    //     druidic_focus: [],
+    //     holy_symbol: [],
+    //     artisans_tools: [],
+    //     gaming_set: [],
+    //     kit: [],
+    //     musical_instrument: [],
+    //     miscellaneous: []
+    // }//end currentItems
 
-    $scope.load = 0;
+    // $scope.data = $http({
+    //     method: 'GET',
+    //     url: '/char.json'
+    // }).then(function(response) {   
+    //     return response.data;         
+    // }).then(function(data) {
+    //     $scope.currentItems = data.items;
+    //     $scope.charName = data.name;
+    //     $scope.strScore = data.strength;
+    //     $scope.load = data.load;
+    // });    
+
+    let ref = database.ref(`characters/Tork`);
+    ref.once('value').then(function(snap) {
+        $log.log(snap.val());
+        let char = JSON.parse(snap.val());
+        $log.log(char);
+        $scope.$apply(function() {
+            $scope.currentItems = char.item;
+            $scope.charName = char.name;
+            $scope.strScore = char.strength;
+            $scope.load = char.load;
+            $log.log($scope.currentItems);
+        });        
+    });
 
     function assignByType(list, item) {
         list[item.type].push(item);
@@ -74,4 +99,28 @@ angular.module("carryingCapacity")
     $scope.clearSearchName = function() {
         $scope.searchName = "";
     };//end clearSearchName
+
+    $scope.saveChar = function(charName) {   
+        let ref = database.ref(`characters/${charName}`);
+        let obj = {
+            name: $scope.charName,
+            strength: $scope.strScore,
+            item: $scope.currentItems,
+            load: $scope.load
+        }   
+        $log.log(obj);
+        obj = angular.toJson(obj);
+        ref.set(obj);
+    };
+
+    $scope.showItems = function() {
+        $log.log($scope.currentItems);
+    };
+
+    $scope.retrieveData = function() {
+        let ref = database.ref(`characters/Tork`);
+        ref.once('value').then(function(snap) {
+            $log.log(snap.val());     
+        });
+    };
 }]);
