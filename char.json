@@ -1,9 +1,9 @@
 {
-    "name": "Tork",
-    "strength": 20,
+    "name": "Dummy",
+    "strength": 1,
     "items": {
         "weapon": [],
-        "armor": [{ "name": "Padded", "weight": 8, "type": "armor", "class": "light", "description": "nothing", "quantity": 1}],
+        "armor": [],
         "potion": [],
         "ammunition": [],
         "clothing": [],
@@ -16,5 +16,5 @@
         "musical_instrument": [],
         "miscellaneous": []
     },
-    "load": 8
+    "load": 0
 }

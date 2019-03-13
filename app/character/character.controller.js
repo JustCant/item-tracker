@@ -10,6 +10,18 @@ angular.module("carryingCapacity")
             $scope.itemList.push(response.data[key]);          
     });
 
+    $http({
+        method: 'GET',
+        url: '/char.json'
+    }).then(function(response) {   
+        return response.data;         
+    }).then(function(data) {
+        $scope.currentItems = data.items;
+        $scope.charName = data.name;
+        $scope.strScore = data.strength;
+        $scope.load = data.load;
+    });   
+
     // $scope.currentItems = {
     //     weapon: [],
     //     armor: [],
@@ -24,33 +36,7 @@ angular.module("carryingCapacity")
     //     kit: [],
     //     musical_instrument: [],
     //     miscellaneous: []
-    // }//end currentItems
-
-    // $scope.data = $http({
-    //     method: 'GET',
-    //     url: '/char.json'
-    // }).then(function(response) {   
-    //     return response.data;         
-    // }).then(function(data) {
-    //     $scope.currentItems = data.items;
-    //     $scope.charName = data.name;
-    //     $scope.strScore = data.strength;
-    //     $scope.load = data.load;
-    // });    
-
-    let ref = database.ref(`characters/Tork`);
-    ref.once('value').then(function(snap) {
-        $log.log(snap.val());
-        let char = JSON.parse(snap.val());
-        $log.log(char);
-        $scope.$apply(function() {
-            $scope.currentItems = char.item;
-            $scope.charName = char.name;
-            $scope.strScore = char.strength;
-            $scope.load = char.load;
-            $log.log($scope.currentItems);
-        });        
-    });
+    // }//end currentItems         
 
     function assignByType(list, item) {
         list[item.type].push(item);
@@ -113,14 +99,19 @@ angular.module("carryingCapacity")
         ref.set(obj);
     };
 
-    $scope.showItems = function() {
-        $log.log($scope.currentItems);
-    };
-
-    $scope.retrieveData = function() {
-        let ref = database.ref(`characters/Tork`);
+    $scope.loadChar = function(character) {
+        let ref = database.ref(`characters/${character}`);
         ref.once('value').then(function(snap) {
-            $log.log(snap.val());     
+            $log.log(snap.val());
+            let char = JSON.parse(snap.val());
+            $log.log(char);
+            $scope.$apply(function() {
+                $scope.currentItems = char.item;
+                $scope.charName = char.name;
+                $scope.strScore = char.strength;
+                $scope.load = char.load;
+                $log.log($scope.currentItems);
+            });        
         });
-    };
+    };//end loadChar    
 }]);

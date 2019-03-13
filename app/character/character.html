@@ -133,6 +133,9 @@
         </ul>
     </div> 
     <button ng-click="saveChar(charName)">Save Character</button> 
-    <button ng-click="showItems()">Show itemlist</button>
-    <button ng-click="retrieveData()">Retrieve Data</button>
+    <button ng-click="loadNewChar = !loadNewChar" ng-show="!loadNewChar">Load Character</button>    
+    <label for="character" ng-show="loadNewChar">Enter Name of Character</label>
+    <input type="text" ng-model="character" ng-show="loadNewChar"/>
+    <button ng-click="loadChar(character); loadNewChar = !loadNewChar" ng-show="loadNewChar">OK</button>
+    <button ng-click="loadNewChar = !loadNewChar" ng-show="loadNewChar">Cancel</button>
 </div>

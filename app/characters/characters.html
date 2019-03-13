@@ -1,4 +1,8 @@
 <div id="characters" ng-controller="charsCtrl">
-    <button ng-click="addCharacter()">Add Character</button>
-    <character></character>
+    <button ng-click="createNewChar()">Create New Character</button>
+    <button ng-click="loadNewChar = !loadNewChar" ng-show="!loadNewChar">Load Character</button>
+    <button ng-click="loadNewChar = !loadNewChar" ng-show="loadNewChar">Cancel</button>
+    <label for="character" ng-show="loadNewChar">Enter Name of Character</label>
+    <input type="text" ng-model="character" ng-show="loadNewChar"/>
+    <button ng-click="loadChar(character)" ng-show="loadNewChar">OK</button>
 </div>
