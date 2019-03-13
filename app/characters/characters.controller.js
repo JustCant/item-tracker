@@ -16,11 +16,21 @@ angular.module("carryingCapacity")
         });      
     });    
 
-    $scope.createNewChar = function() {
+    $scope.createNewChar = function(scope) {
         let $characters = $("#characters");
-        let character = $compile("<character></character>")($scope);
+        let character = $compile("<character></character>")(scope);
         $characters.append(character);
     };//end createNewChar
+
+    $scope.loadChar = function(character) {
+        let cn = character.toLowerCase();
+        let ref = database.ref(`characters/${cn}`);
+        ref.once('value').then(function(snap) {
+            let character = JSON.parse(snap.val());
+            console.log(character);
+        });
+        //$scope.createNewChar();
+    };
 
     $scope.deleteChar = function(character) {
         let cn = character.toLowerCase();

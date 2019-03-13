@@ -1,9 +1,17 @@
 <div id="characters" ng-controller="charsCtrl">
-    <button id="createNewChar" ng-click="createNewChar()">Create New Character</button>    
-    <button ng-click="deleteNewChar = !deleteNewChar" ng-show="!deleteNewChar">Delete Character</button> 
-    <select name="characters" ng-model="character" ng-show="deleteNewChar">
+    <button id="createNewChar" ng-click="createNewChar(this)">Create New Character</button>    
+    <!--
+    <button ng-click="loadNewChar = !loadNewChar" ng-hide="loadNewChar">Load Character</button>
+    <select name="loadCharacters" ng-model="loadedCharacter" ng-show="loadNewChar">
         <option value="{{character}}" ng-repeat="character in characters track by $index">{{character}}</option>
     </select>  
-    <button ng-click="deleteChar(character); deleteNewChar = !deleteNewChar" ng-show="deleteNewChar">DELETE</button>
+    <button ng-click="loadChar(loadedCharacter); loadNewChar = !loadNewChar" ng-show="loadNewChar">LOAD</button>
+    <button ng-click="loadNewChar = !loadNewChar" ng-show="loadNewChar">Cancel</button> 
+    -->
+    <button ng-click="deleteNewChar = !deleteNewChar" ng-show="!deleteNewChar">Delete Character</button> 
+    <select name="characters" ng-model="deletedCharacter" ng-show="deleteNewChar">
+        <option value="{{character}}" ng-repeat="character in characters track by $index">{{character}}</option>
+    </select>  
+    <button ng-click="deleteChar(deletedCharacter); deleteNewChar = !deleteNewChar" ng-show="deleteNewChar">DELETE</button>
     <button ng-click="deleteNewChar = !deleteNewChar" ng-show="deleteNewChar">Cancel</button> 
 </div>  

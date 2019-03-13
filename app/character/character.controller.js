@@ -1,5 +1,17 @@
 angular.module("carryingCapacity")
 .controller("charCtrl", ["$scope", "$http", "$log", function($scope, $http, $log) {
+    $scope.characters = [];
+
+    let ref = database.ref('characters');
+
+    ref.once('value').then(function(snap) {
+        snap.forEach(function(childSnap) {
+            $scope.$apply(function() {
+                let character = JSON.parse(childSnap.val()).name;
+                $scope.characters.push(character);
+            });            
+        });      
+    });   
     
     $scope.itemList = [];
     $http({
@@ -112,7 +124,5 @@ angular.module("carryingCapacity")
                 $scope.load = char.load;
             });        
         });
-    };//end loadChar   
-    
-    
+    };//end loadChar       
 }]);
