@@ -87,31 +87,32 @@ angular.module("carryingCapacity")
     };//end clearSearchName
 
     $scope.saveChar = function(charName) {   
-        let ref = database.ref(`characters/${charName}`);
+        let cn = charName.toLowerCase();
+        let ref = database.ref(`characters/${cn}`);
         let obj = {
             name: $scope.charName,
             strength: $scope.strScore,
             item: $scope.currentItems,
             load: $scope.load
         }   
-        $log.log(obj);
         obj = angular.toJson(obj);
         ref.set(obj);
     };
 
     $scope.loadChar = function(character) {
-        let ref = database.ref(`characters/${character}`);
+        let cn = character.toLowerCase();
+        let ref = database.ref(`characters/${cn}`);
+        //error handilng in case character does not exist
         ref.once('value').then(function(snap) {
-            $log.log(snap.val());
             let char = JSON.parse(snap.val());
-            $log.log(char);
             $scope.$apply(function() {
                 $scope.currentItems = char.item;
                 $scope.charName = char.name;
                 $scope.strScore = char.strength;
                 $scope.load = char.load;
-                $log.log($scope.currentItems);
             });        
         });
-    };//end loadChar    
+    };//end loadChar   
+    
+    
 }]);

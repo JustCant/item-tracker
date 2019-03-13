@@ -58,6 +58,7 @@
 .addItems ul li:hover {
   cursor: pointer;
 }
-.character {
+.character,
+#createNewChar {
   margin-bottom: 20px;
 }

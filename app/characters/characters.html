@@ -1,8 +1,9 @@
 <div id="characters" ng-controller="charsCtrl">
-    <button ng-click="createNewChar()">Create New Character</button>
-    <button ng-click="loadNewChar = !loadNewChar" ng-show="!loadNewChar">Load Character</button>
-    <button ng-click="loadNewChar = !loadNewChar" ng-show="loadNewChar">Cancel</button>
-    <label for="character" ng-show="loadNewChar">Enter Name of Character</label>
-    <input type="text" ng-model="character" ng-show="loadNewChar"/>
-    <button ng-click="loadChar(character)" ng-show="loadNewChar">OK</button>
-</div>
+    <button id="createNewChar" ng-click="createNewChar()">Create New Character</button>    
+    <button ng-click="deleteNewChar = !deleteNewChar" ng-show="!deleteNewChar">Delete Character</button> 
+    <select name="characters" ng-model="character" ng-show="deleteNewChar">
+        <option value="{{character}}" ng-repeat="character in characters track by $index">{{character}}</option>
+    </select>  
+    <button ng-click="deleteChar(character); deleteNewChar = !deleteNewChar" ng-show="deleteNewChar">DELETE</button>
+    <button ng-click="deleteNewChar = !deleteNewChar" ng-show="deleteNewChar">Cancel</button> 
+</div>  
