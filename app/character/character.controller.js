@@ -40,13 +40,21 @@ angular.module("carryingCapacity")
         list[item.type].push(item);
     }//end assignByType
      
-    $scope.addItem = function(item) {
+    $scope.addItem = function(item, quantity) {
+        //if quantity is not defined then default it to 1
+        if (!quantity)
+            quantity = 1;
+
         //Add item weight to $scope.load
-        $scope.load += parseFloat(item.weight);
+        $scope.load += parseFloat(item.weight * quantity);
 
         //If item does not have a quantity property add one
-        if(!item.quantity)
-            item.quantity = 1;
+        if(!item.quantity) {
+            if(quantity)
+                item.quantity = quantity;
+            else
+                item.quantity = 1;
+        }//end if              
 
         //Loop through properties of $scope.currentItems
         for(let key in $scope.currentItems) {
@@ -56,8 +64,12 @@ angular.module("carryingCapacity")
                 if($scope.currentItems[key].length >= 1) {
                     //check if item is already in array
                     $scope.currentItems[key].forEach(x => {
-                        if(x.name === item.name) 
-                            x.quantity += 1;   
+                        if(x.name === item.name) {
+                            if(quantity)
+                                item.quantity = quantity;
+                            else
+                                x.quantity += 1;
+                        }//end if   
                         //if at the end of the array with no match
                         else if (($scope.currentItems[key].indexOf(x) + 1) === $scope.currentItems[key].length)  
                             assignByType($scope.currentItems, item);                   

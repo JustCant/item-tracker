@@ -129,7 +129,14 @@
             <option value="miscellaneous">Miscellaneous</option>
         </select>
         <ul>
-            <li title="{{item.description}}" value="{{item.name}}" ng-click="addItem(item)" ng-repeat="item in itemList | filter:{'name': searchName, 'type': searchType}">{{item.name}} - {{item.weight}} lbs</li>
+            <div ng-repeat="item in itemList | filter:{'name': searchName, 'type': searchType}">
+                <li title="{{item.description}}" value="{{item.name}}" ng-click="howMany = !howMany" >
+                    {{item.name}} - {{item.weight}} lbs                    
+                </li>   
+                <input ng-show="howMany" ng-model="quantity" type="text"/>
+                <button class="confirmBtn" ng-show="howMany" ng-click="addItem(item, quantity); howMany = !howMany">Add</button>
+                <button class="cancelBtn" ng-show="howMany" ng-click="howMany = !howMany">Cancel</button>  
+            </div>       
         </ul>
     </div> 
     <button class="saveBtn" ng-click="saveChar(charName)">Save Character</button> 
