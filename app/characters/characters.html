@@ -8,8 +8,8 @@
     <button ng-click="loadChar(loadedCharacter); loadNewChar = !loadNewChar" ng-show="loadNewChar">LOAD</button>
     <button ng-click="loadNewChar = !loadNewChar" ng-show="loadNewChar">Cancel</button> 
     -->
-    <button ng-click="delete = !delete" ng-hide="delete">Delete Character</button> 
+    <button id="deleteBtn" ng-click="delete = !delete" ng-hide="delete">Delete Character</button> 
     <select name="characters" ng-model="selected" ng-show="delete" ng-options="character for character in characters"></select>  
-    <button ng-click="deleteChar(selected); delete = !delete" ng-show="delete">DELETE</button>
-    <button ng-click="delete = !delete" ng-show="delete">Cancel</button> 
-</div>   
+    <button id="deleteConfirmBtn" ng-click="deleteChar(selected); delete = !delete" ng-show="delete">DELETE</button>
+    <button class="cancelBtn" ng-click="delete = !delete" ng-show="delete">Cancel</button> 
+</div>     

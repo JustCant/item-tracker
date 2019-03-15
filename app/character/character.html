@@ -1,13 +1,13 @@
 <div class="character" ng-controller="charCtrl">
     
     <div class="charName"> 
-        <input class="charNameInput" ng-mouseleave="changeName = false" ng-show="changeName" type="text" ng-model="charName" >
-        <div class="charNameLabel" ng-mouseenter="changeName = true" ng-hide="changeName">NAME: {{charName}}</div>
+        <div class="charNameLabel" ng-click="changeName = true" ng-hide="changeName">NAME: {{charName}}</div>
+        <input class="charNameInput" ng-blur="changeName = false" ng-show="changeName" type="text" ng-model="charName">        
     </div>
 
     <div class="strScore">
-        <input class="strScoreInput" ng-mouseleave="changeStr = false" ng-show="changeStr" type="text" ng-model="strScore" >
-        <div class="strScoreLabel" ng-mouseenter="changeStr = true" ng-hide="changeStr">STR: {{strScore}}</div>
+        <div class="strScoreLabel" ng-click="changeStr = true" ng-hide="changeStr">STR: {{strScore}}</div>
+        <input class="strScoreInput" ng-blur="changeStr = false" ng-show="changeStr" type="text" ng-model="strScore">        
     </div>  
 
     <div class="carryCapacity">
@@ -29,79 +29,79 @@
             <h4>Weapons:</h4>    
             <ul>
                 <li title="{{weapon.description}}" value="{{weapon.name}}" ng-repeat="weapon in currentItems.weapon track by $index">{{weapon.name}} - {{weapon.weight}} lbs x {{weapon.quantity}}
-                    <button ng-click="removeItem(weapon, currentItems.weapon)">REMOVE</button>
+                    <button class="removeBtn" ng-click="removeItem(weapon, currentItems.weapon)">REMOVE</button>
                 </li>
             </ul>
             <h4>Armor:</h4> 
             <ul>
                 <li title="{{armor.description}}" value="{{armor.name}}" ng-repeat="armor in currentItems.armor track by $index">{{armor.name}} - {{armor.weight}} lbs x {{armor.quantity}}
-                    <button ng-click="removeItem(armor, currentItems.armor)">REMOVE</button>
+                    <button class="removeBtn" ng-click="removeItem(armor, currentItems.armor)">REMOVE</button>
                 </li>
             </ul>
             <h4>Potions:</h4>
             <ul>
                 <li title="{{potion.description}}" value="{{potion.name}}" ng-repeat="potion in currentItems.potion track by $index">{{potion.name}} - {{potion.weight}} lbs x {{potion.quantity}}
-                    <button ng-click="removeItem(potion, currentItems.potion)">REMOVE</button>
+                    <button class="removeBtn" ng-click="removeItem(potion, currentItems.potion)">REMOVE</button>
                 </li>
             </ul>
             <h4>Ammunition:</h4>
             <ul>
                 <li title="{{ammo.description}}" value="{{ammo.name}}" ng-repeat="ammo in currentItems.ammunition track by $index">{{ammo.name}} - {{ammo.weight}} lbs x {{ammo.quantity}}
-                    <button ng-click="removeItem(ammo, currentItems.ammunition)">REMOVE</button>
+                    <button class="removeBtn" ng-click="removeItem(ammo, currentItems.ammunition)">REMOVE</button>
                 </li>
             </ul>
             <h4>Clothing:</h4>
             <ul>
                 <li title="{{article.description}}" value="{{article.name}}" ng-repeat="article in currentItems.clothing track by $index">{{article.name}} - {{article.weight}} lbs x {{article.quantity}}
-                    <button ng-click="removeItem(article, currentItems.clothing)">REMOVE</button>
+                    <button class="removeBtn" ng-click="removeItem(article, currentItems.clothing)">REMOVE</button>
                 </li>
             </ul>
             <h4>Arcane Focus:</h4>
             <ul>
                 <li title="{{focus.description}}" value="{{focus.name}}" ng-repeat="focus in currentItems.arcane_focus track by $index">{{focus.name}} - {{focus.weight}} lbs x {{focus.quantity}}
-                    <button ng-click="removeItem(focus, currentItems.arcane_focus)">REMOVE</button>
+                    <button class="removeBtn" ng-click="removeItem(focus, currentItems.arcane_focus)">REMOVE</button>
                 </li>
             </ul>
             <h4>Druidic Focus:</h4>
             <ul>
                 <li title="{{focus.description}}" value="{{focus.name}}" ng-repeat="focus in currentItems.druidic_focus track by $index">{{focus.name}} - {{focus.weight}} lbs x {{focus.quantity}}
-                    <button ng-click="removeItem(focus, currentItems.druidic_focus)">REMOVE</button>
+                    <button class="removeBtn" ng-click="removeItem(focus, currentItems.druidic_focus)">REMOVE</button>
                 </li>
             </ul>
             <h4>Holy Symbol:</h4>
             <ul>
                 <li title="{{symbol.description}}" value="{{symbol.name}}" ng-repeat="symbol in currentItems.holy_symbol track by $index">{{symbol.name}} - {{symbol.weight}} lbs x {{symbol.quantity}}
-                    <button ng-click="removeItem(symbol, currentItems.holy_symbol)">REMOVE</button>
+                    <button class="removeBtn" ng-click="removeItem(symbol, currentItems.holy_symbol)">REMOVE</button>
                 </li>
             </ul>
             <h4>Artisans Tools:</h4>
             <ul>
                 <li title="{{tool.description}}" value="{{tool.name}}" ng-repeat="tool in currentItems.artisans_tools track by $index">{{tool.name}} - {{tool.weight}} lbs x {{tool.quantity}}
-                    <button ng-click="removeItem(tool, currentItems.artisans_tools)">REMOVE</button>
+                    <button class="removeBtn" ng-click="removeItem(tool, currentItems.artisans_tools)">REMOVE</button>
                 </li>
             </ul>
             <h4>Gaming Sets:</h4>
             <ul>
                 <li title="{{game.description}}" value="{{game.name}}" ng-repeat="game in currentItems.gaming_set track by $index">{{game.name}} - {{game.weight}} lbs x {{game.quantity}}
-                    <button ng-click="removeItem(game, currentItems.gaming_set)">REMOVE</button>
+                    <button class="removeBtn" ng-click="removeItem(game, currentItems.gaming_set)">REMOVE</button>
                 </li>
             </ul>
             <h4>Kits:</h4>
             <ul>
                 <li title="{{kit.description}}" value="{{kit.name}}" ng-repeat="kit in currentItems.kit track by $index">{{kit.name}} - {{kit.weight}} lbs x {{kit.quantity}}
-                    <button ng-click="removeItem(kit, currentItems.kit)">REMOVE</button>
+                    <button class="removeBtn" ng-click="removeItem(kit, currentItems.kit)">REMOVE</button>
                 </li>
             </ul>
             <h4>Musical Instruments:</h4>
             <ul>
                 <li title="{{instrument.description}}" value="{{instrument.name}}" ng-repeat="instrument in currentItems.musical_instrument track by $index">{{instrument.name}} - {{instrument.weight}} lbs x {{instrument.quantity}}
-                    <button ng-click="removeItem(instrument, currentItems.musical_instrument)">REMOVE</button>
+                    <button class="removeBtn" ng-click="removeItem(instrument, currentItems.musical_instrument)">REMOVE</button>
                 </li>
             </ul>
             <h4>Miscellaneous:</h4>
             <ul>
                 <li title="{{item.description}}" value="{{item.name}}" ng-repeat="item in currentItems.miscellaneous track by $index">{{item.name}} - {{item.weight}} lbs x {{item.quantity}}
-                    <button ng-click="removeItem(item, currentItems.miscellaneous)">REMOVE</button>
+                    <button class="removeBtn" ng-click="removeItem(item, currentItems.miscellaneous)">REMOVE</button>
                 </li>
             </ul>
         </div>
@@ -110,7 +110,7 @@
     <div class="addItems">
         Add Item:
         <label style="display: block">Search by Name: <input ng-model="searchName"></label>
-        <button style="display: block" ng-click="clearSearchName()">Clear</button>
+        <button class="clearBtn" style="display: block" ng-click="clearSearchName()">Clear</button>
         Search by Type:
         <select ng-model="searchType">
             <option value="">All</option>
@@ -132,11 +132,11 @@
             <li title="{{item.description}}" value="{{item.name}}" ng-click="addItem(item)" ng-repeat="item in itemList | filter:{'name': searchName, 'type': searchType}">{{item.name}} - {{item.weight}} lbs</li>
         </ul>
     </div> 
-    <button ng-click="saveChar(charName)">Save Character</button> 
-    <button ng-click="loadNewChar = !loadNewChar" ng-show="!loadNewChar">Load Character</button>    
+    <button class="saveBtn" ng-click="saveChar(charName)">Save Character</button> 
+    <button class="loadBtn" ng-click="loadNewChar = !loadNewChar" ng-show="!loadNewChar">Load Character</button>    
     <label for="character" ng-show="loadNewChar">Pick a Character to Load</label>
     <select name="loadCharacters" ng-model="selected" ng-show="loadNewChar" ng-options="character for character in characters"></select> 
-    <button ng-click="loadChar(selected); loadNewChar = !loadNewChar" ng-show="loadNewChar">OK</button>
-    <button ng-click="loadNewChar = !loadNewChar" ng-show="loadNewChar">Cancel</button>
+    <button class="confirmBtn" ng-click="loadChar(selected); loadNewChar = !loadNewChar" ng-show="loadNewChar">OK</button>
+    <button class="cancelBtn" ng-click="loadNewChar = !loadNewChar" ng-show="loadNewChar">Cancel</button>
     <!--<button ng-click="deleteChar(charName)">Delete Character</button>-->
 </div>
