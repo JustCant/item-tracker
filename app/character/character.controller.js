@@ -80,12 +80,15 @@ angular.module("carryingCapacity")
         }//end for
     };//end addItem
 
-    $scope.removeItem = function(item, array) {
+    $scope.removeItem = function(item, array, quantity) {
+        if (!quantity)
+            quantity = 1;
+
         //Remove item weight from $scope.load
-        $scope.load -= parseFloat(item.weight);
+        $scope.load -= parseFloat(item.weight * quantity);
 
         //Lower item's quantity amount by 1
-        item.quantity -= 1;
+        item.quantity -= quantity;
 
         //If the item's quantity amount is 0 then remove it from array
         if(item.quantity === 0)    
