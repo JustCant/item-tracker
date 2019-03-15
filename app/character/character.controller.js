@@ -11,9 +11,11 @@ angular.module("carryingCapacity")
                 $scope.characters.push(character);
             });            
         });      
+        $scope.selected = $scope.characters[0];
     });   
     
     $scope.itemList = [];
+
     $http({
         method: 'GET',
         url: '/items.json'
@@ -32,23 +34,7 @@ angular.module("carryingCapacity")
         $scope.charName = data.name;
         $scope.strScore = data.strength;
         $scope.load = data.load;
-    });   
-
-    // $scope.currentItems = {
-    //     weapon: [],
-    //     armor: [],
-    //     potion: [],
-    //     ammunition: [],
-    //     clothing: [],
-    //     arcane_focus: [],
-    //     druidic_focus: [],
-    //     holy_symbol: [],
-    //     artisans_tools: [],
-    //     gaming_set: [],
-    //     kit: [],
-    //     musical_instrument: [],
-    //     miscellaneous: []
-    // }//end currentItems         
+    });         
 
     function assignByType(list, item) {
         list[item.type].push(item);

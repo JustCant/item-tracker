@@ -1,7 +1,7 @@
 angular.module("carryingCapacity")
 .controller("charsCtrl", ["$scope", "$compile", function($scope, $compile) {
     
-    $scope.deleteNewChar = false;
+    $scope.delete = false;
 
     $scope.characters = [];
 
@@ -11,11 +11,12 @@ angular.module("carryingCapacity")
         snap.forEach(function(childSnap) {
             $scope.$apply(function() {
                 let character = JSON.parse(childSnap.val()).name;
-                $scope.characters.push(character);
+                $scope.characters.push(character);  
             });            
         });      
+        $scope.selected = $scope.characters[0];
     });    
-
+    
     $scope.createNewChar = function(scope) {
         let $characters = $("#characters");
         let character = $compile("<character></character>")(scope);
@@ -38,5 +39,7 @@ angular.module("carryingCapacity")
         ref.remove();
         $scope.character = "";
         $scope.characters.splice($scope.characters.indexOf(character), 1);
+        if ($scope.characters[0])
+            $scope.selected = $scope.characters[0];
     };//end deleteChar
 }]);

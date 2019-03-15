@@ -135,10 +135,8 @@
     <button ng-click="saveChar(charName)">Save Character</button> 
     <button ng-click="loadNewChar = !loadNewChar" ng-show="!loadNewChar">Load Character</button>    
     <label for="character" ng-show="loadNewChar">Pick a Character to Load</label>
-    <select name="loadCharacters" ng-model="loadedCharacter" ng-show="loadNewChar">
-        <option value="{{character}}" ng-repeat="character in characters track by $index">{{character}}</option>
-    </select> 
-    <button ng-click="loadChar(loadedCharacter); loadNewChar = !loadNewChar" ng-show="loadNewChar">OK</button>
+    <select name="loadCharacters" ng-model="selected" ng-show="loadNewChar" ng-options="character for character in characters"></select> 
+    <button ng-click="loadChar(selected); loadNewChar = !loadNewChar" ng-show="loadNewChar">OK</button>
     <button ng-click="loadNewChar = !loadNewChar" ng-show="loadNewChar">Cancel</button>
     <!--<button ng-click="deleteChar(charName)">Delete Character</button>-->
 </div>
