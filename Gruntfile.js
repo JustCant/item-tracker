@@ -1,12 +1,12 @@
 module.exports = function(grunt) {
     grunt.initConfig({
-        uglify: {
-          my_target: {
-            files: {
-              'main.min.js': ['app/**/*.js']
-            }
-          }
-        },
+        // uglify: {
+        //   my_target: {
+        //     files: {
+        //       'main.min.js': ['app/**/*.js']
+        //     }
+        //   }
+        // },
         less: {
             development: {
               files: {
@@ -15,13 +15,13 @@ module.exports = function(grunt) {
             },
         },
         watch: {
-            js: {
-              files: ['**/*.js'],
-              tasks: ['uglify'],
-              options: {
-                spawn: false,
-              },
-            },
+            // js: {
+            //   files: ['**/*.js'],
+            //   tasks: ['uglify'],
+            //   options: {
+            //     spawn: false,
+            //   },
+            // },
             css: {
               files: ['**/*.css'],
               tasks: [''],
@@ -39,9 +39,9 @@ module.exports = function(grunt) {
           },
     });
 
-    grunt.loadNpmTasks('grunt-contrib-uglify');
+    //grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['uglify', 'less', 'watch']);
+    grunt.registerTask('default', ['less', 'watch']);
 };
