@@ -1,5 +1,6 @@
-angular.module("carryingCapacity", ["ngRoute"])
-.config(function($locationProvider, $routeProvider) {
+const app = angular.module("itemTracker", ["ngRoute"]);
+
+app.config(function($locationProvider, $routeProvider) {
     $locationProvider
         .hashPrefix("");
 

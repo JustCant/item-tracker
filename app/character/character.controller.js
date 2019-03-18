@@ -1,8 +1,7 @@
-angular.module("carryingCapacity")
-.controller("charCtrl", ["$scope", "$http", "$log", function($scope, $http, $log) {
+app.controller("charCtrl", ["$scope", "$http", "$log", function($scope, $http, $log) {
     $scope.characters = [];
-
-    let ref = database.ref('characters');
+      
+    const ref = database.ref('characters');
 
     ref.once('value').then(function(snap) {
         snap.forEach(function(childSnap) {

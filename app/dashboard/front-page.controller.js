@@ -1,5 +1,4 @@
-angular.module("carryingCapacity")
-.controller("charsCtrl", ["$scope", "$compile", function($scope, $compile) {
+app.controller("charsCtrl", ["$scope", "$compile", function($scope, $compile) {
     
     $scope.delete = false;
 

@@ -1,4 +1,4 @@
-<div class="character" ng-controller="charCtrl">
+<div class="character">
     
     <div class="charName"> 
         <div class="charNameLabel" ng-click="changeName = true" ng-hide="changeName">NAME: {{charName}}</div>
@@ -212,5 +212,6 @@
         <button class="confirmBtn" ng-click="loadChar(selected); loadNewChar = !loadNewChar" ng-show="loadNewChar">OK</button>
         <button class="cancelBtn" ng-click="loadNewChar = !loadNewChar" ng-show="loadNewChar">Cancel</button>
         <!--<button ng-click="deleteChar(charName)">Delete Character</button>-->
+        <button class="closeBtn" title="Close character" data-my-close-char>X</button>
     </div>
 </div>
