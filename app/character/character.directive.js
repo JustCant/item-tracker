@@ -1,5 +1,5 @@
 angular.module("carryingCapacity")
-.directive("character", ["$compile", function($compile) {
+.directive("character", [function() {
     return {
         templateUrl: "/app/character/character.html"
     };

@@ -18,7 +18,7 @@ angular.module("carryingCapacity")
 
     $http({
         method: 'GET',
-        url: '/items.json'
+        url: 'data/items.json'
     }).then(function(response) {        
         for(let key in response.data)                   
             $scope.itemList.push(response.data[key]);          
@@ -26,7 +26,7 @@ angular.module("carryingCapacity")
 
     $http({
         method: 'GET',
-        url: '/char.json'
+        url: 'data/char.json'
     }).then(function(response) {   
         return response.data;         
     }).then(function(data) {

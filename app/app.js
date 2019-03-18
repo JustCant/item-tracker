@@ -7,7 +7,7 @@ angular.module("carryingCapacity", ["ngRoute"])
 
     $routeProvider
         .when("/home", {
-            templateUrl: "/app/characters/characters.html"
+            templateUrl: "/app/dashboard/dashboard.html"
         })
         .otherwise({
             redirectTo: "/home"
