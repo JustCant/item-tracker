@@ -16,12 +16,6 @@ angular.module("carryingCapacity")
         });      
         $scope.selected = $scope.characters[0];
     });    
-    
-    $scope.createNewChar = function(scope) {
-        let $characters = $("#characters");
-        let character = $compile("<character></character>")(scope);
-        $characters.append(character);
-    };//end createNewChar
 
     $scope.loadChar = function(character) {
         let cn = character.toLowerCase();
