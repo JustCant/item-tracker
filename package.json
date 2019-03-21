@@ -1,12 +1,12 @@
 {
-  "name": "carryingcapacity",
+  "name": "item-tracker",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Justin Cantley",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.7.7",

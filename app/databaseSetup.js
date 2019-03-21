@@ -9,4 +9,4 @@ var config = {
 };
 firebase.initializeApp(config);
 
-let database = firebase.database();
+const database = firebase.database();
