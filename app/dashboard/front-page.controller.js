@@ -4,35 +4,31 @@ app.controller("charsCtrl", ["$scope", "$compile", function($scope, $compile) {
 
     $scope.characters = [];
 
-    let ref = database.ref('characters');
-
-    ref.once('value').then(function(snap) {
-        snap.forEach(function(childSnap) {
-            $scope.$apply(function() {
-                let character = JSON.parse(childSnap.val()).name;
-                $scope.characters.push(character);  
+    db.collection('characters').get().then(snap => {
+        snap.forEach(childSnap => {
+            $scope.$apply(() => {
+                $scope.characters.push(childSnap.data().name);
             });            
-        });      
-        $scope.selected = $scope.characters[0];
-    });    
-
-    $scope.loadChar = function(character) {
-        let cn = character.toLowerCase();
-        let ref = database.ref(`characters/${cn}`);
-        ref.once('value').then(function(snap) {
-            let character = JSON.parse(snap.val());
-            console.log(character);
         });
-        //$scope.createNewChar();
-    };
+        $scope.selected = $scope.characters[0];
+    });
+
+    // $scope.loadChar = function(character) {
+    //     let cn = character.toLowerCase();
+    //     let ref = database.ref(`characters/${cn}`);
+    //     ref.once('value').then(function(snap) {
+    //         let character = JSON.parse(snap.val());
+    //         console.log(character);
+    //     });
+    //     //$scope.createNewChar();
+    // };
 
     $scope.deleteChar = function(character) {
-        let cn = character.toLowerCase();
-        let ref = database.ref(`characters/${cn}`);
-        ref.remove();
-        $scope.character = "";
-        $scope.characters.splice($scope.characters.indexOf(character), 1);
-        if ($scope.characters[0])
-            $scope.selected = $scope.characters[0];
+        db.collection('characters').where('name', '==', character).get()
+        .then(snap => {
+            let id = snap.docs[0].id;
+            db.collection('characters').doc(id).delete();
+            $scope.characters.splice($scope.characters.indexOf(character), 1);
+        });
     };//end deleteChar
 }]);

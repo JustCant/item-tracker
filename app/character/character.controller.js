@@ -15,19 +15,17 @@ app.controller("charCtrl", ["$scope", "$log", "appService", function($scope, $lo
         "kit": [],
         "musical_instrument": [],
         "miscellaneous": []
-    };
+    };     
 
-    const ref = database.ref('characters');
-
-    ref.once('value').then(function(snap) {
-        snap.forEach(function(childSnap) {
-            $scope.$apply(function() {
-                let character = JSON.parse(childSnap.val()).name;
-                $scope.characters.push(character);
+    // Populate load list
+    db.collection('characters').get().then(snap => {
+        snap.forEach(childSnap => {
+            $scope.$apply(() => {
+                $scope.characters.push(childSnap.data().name);
             });            
-        });      
+        });
         $scope.selected = $scope.characters[0];
-    });       
+    });
 
     /**
      * Helper function
@@ -44,10 +42,12 @@ app.controller("charCtrl", ["$scope", "$log", "appService", function($scope, $lo
         //if quantity is not defined then default it to 1
         if (!quantity)
             quantity = 1;
+        else
+            quantity = parseInt(quantity);
 
         //If item does not have a quantity property add one
         if(!item.quantity) 
-        item.quantity = parseFloat(quantity); 
+            item.quantity = quantity; 
 
         //Add item weight to $scope.load
         $scope.load += parseFloat(item.weight * quantity);                    
@@ -61,7 +61,7 @@ app.controller("charCtrl", ["$scope", "$log", "appService", function($scope, $lo
                     //check if item is already in array
                     $scope.currentItems[key].forEach(x => {
                         if(x.name === item.name) 
-                            item.quantity += parseFloat(quantity);   
+                            item.quantity += quantity;   
                         //if at the end of the array with no match
                         else if (($scope.currentItems[key].indexOf(x) + 1) === $scope.currentItems[key].length)  
                             assignByType($scope.currentItems, item);                   
@@ -101,43 +101,44 @@ app.controller("charCtrl", ["$scope", "$log", "appService", function($scope, $lo
     };//end removeItem
 
     /**
-     * Clear search bar
+     * Clear search name and type
      */
     $scope.clearSearchName = function() {
         $scope.searchName = "";
+        $scope.searchType = "";
     };//end clearSearchName
 
     /**
      * Save character
      */
-    $scope.saveChar = function(charName) {   
-        let cn = charName.toLowerCase();
-        let ref = database.ref(`characters/${cn}`);
+    $scope.saveChar = function(id) {  
         let obj = {
             name: $scope.charName,
             strength: $scope.strScore,
             item: $scope.currentItems,
             load: $scope.load
-        }   
-        obj = angular.toJson(obj);
-        ref.set(obj);
+        }
+        if (!id)
+            db.collection('characters').add(obj).then(snap => {$scope.id = snap.id});
+        else    
+            db.collection('characters').doc(id).update(obj);        
     };// end saveChar
 
     /**
      * Load character
      */
     $scope.loadChar = function(character) {
-        let cn = character.toLowerCase();
-        let ref = database.ref(`characters/${cn}`);
-        //error handilng in case character does not exist
-        ref.once('value').then(function(snap) {
-            let char = JSON.parse(snap.val());
+        db.collection('characters').where('name', '==', character).get()
+        .then(snap => {
+            let char = snap.docs[0].data();
             $scope.$apply(function() {
                 $scope.currentItems = char.item;
                 $scope.charName = char.name;
                 $scope.strScore = char.strength;
-                $scope.load = char.load;
-            });        
+                $scope.load = char.load; 
+                $scope.id = snap.docs[0].id;
+                $scope.characters.push(char.name);   
+            });         
         });
     };// end loadChar       
 }]);
