@@ -1,6 +1,22 @@
-app.controller("charCtrl", ["$scope", "$http", "$log", function($scope, $http, $log) {
+app.controller("charCtrl", ["$scope", "$log", "appService", function($scope, $log, appService) {
     $scope.characters = [];
-      
+    $scope.itemList = appService.items;
+    $scope.currentItems = {
+        "weapon": [],
+        "armor": [],
+        "potion": [],
+        "ammunition": [],
+        "clothing": [],
+        "arcane_focus": [],
+        "druidic_focus": [],
+        "holy_symbol": [],
+        "artisans_tools": [],
+        "gaming_set": [],
+        "kit": [],
+        "musical_instrument": [],
+        "miscellaneous": []
+    };
+
     const ref = database.ref('characters');
 
     ref.once('value').then(function(snap) {
@@ -11,49 +27,30 @@ app.controller("charCtrl", ["$scope", "$http", "$log", function($scope, $http, $
             });            
         });      
         $scope.selected = $scope.characters[0];
-    });   
-    
-    $scope.itemList = [];
+    });       
 
-    $http({
-        method: 'GET',
-        url: 'data/items.json'
-    }).then(function(response) {        
-        for(let key in response.data)                   
-            $scope.itemList.push(response.data[key]);          
-    });
-
-    $http({
-        method: 'GET',
-        url: 'data/char.json'
-    }).then(function(response) {   
-        return response.data;         
-    }).then(function(data) {
-        $scope.currentItems = data.items;
-        $scope.charName = data.name;
-        $scope.strScore = data.strength;
-        $scope.load = data.load;
-    });         
-
+    /**
+     * Helper function
+     * assigns an item to the proper array within currentItems
+     */
     function assignByType(list, item) {
         list[item.type].push(item);
     }//end assignByType
      
+    /** 
+     * Add items  
+     */
     $scope.addItem = function(item, quantity) {
         //if quantity is not defined then default it to 1
         if (!quantity)
             quantity = 1;
 
-        //Add item weight to $scope.load
-        $scope.load += parseFloat(item.weight * quantity);
-
         //If item does not have a quantity property add one
-        if(!item.quantity) {
-            if(quantity)
-                item.quantity = quantity;
-            else
-                item.quantity = 1;
-        }//end if              
+        if(!item.quantity) 
+        item.quantity = parseFloat(quantity); 
+
+        //Add item weight to $scope.load
+        $scope.load += parseFloat(item.weight * quantity);                    
 
         //Loop through properties of $scope.currentItems
         for(let key in $scope.currentItems) {
@@ -63,12 +60,8 @@ app.controller("charCtrl", ["$scope", "$http", "$log", function($scope, $http, $
                 if($scope.currentItems[key].length >= 1) {
                     //check if item is already in array
                     $scope.currentItems[key].forEach(x => {
-                        if(x.name === item.name) {
-                            if(quantity)
-                                item.quantity = quantity;
-                            else
-                                x.quantity += 1;
-                        }//end if   
+                        if(x.name === item.name) 
+                            item.quantity += parseFloat(quantity);   
                         //if at the end of the array with no match
                         else if (($scope.currentItems[key].indexOf(x) + 1) === $scope.currentItems[key].length)  
                             assignByType($scope.currentItems, item);                   
@@ -79,20 +72,25 @@ app.controller("charCtrl", ["$scope", "$http", "$log", function($scope, $http, $
         }//end for
     };//end addItem
 
+    /**
+     * Remove items 
+     */
     $scope.removeItem = function(item, array, quantity) {
         if (!quantity)
             quantity = 1;
         else 
             quantity = parseInt(quantity);
 
+        item.quantity = parseInt(item.quantity);
+
         //Remove item weight from $scope.load
-        if (quantity > parseFloat(item.quantity))
-            $scope.load -= parseFloat(item.weight * item.quantity);
+        if (quantity > item.quantity)
+            $scope.load -= item.weight * item.quantity;
         else
-            $scope.load -= parseFloat(item.weight * quantity);
+            $scope.load -= item.weight * quantity;
 
         //Lower item's quantity amount by quantity
-        if (quantity > parseFloat(item.quantity))
+        if (quantity > item.quantity)
             item.quantity -= item.quantity;
         else
             item.quantity -= quantity;
@@ -102,10 +100,16 @@ app.controller("charCtrl", ["$scope", "$http", "$log", function($scope, $http, $
             array.splice(array.indexOf(item), 1);
     };//end removeItem
 
+    /**
+     * Clear search bar
+     */
     $scope.clearSearchName = function() {
         $scope.searchName = "";
     };//end clearSearchName
 
+    /**
+     * Save character
+     */
     $scope.saveChar = function(charName) {   
         let cn = charName.toLowerCase();
         let ref = database.ref(`characters/${cn}`);
@@ -117,8 +121,11 @@ app.controller("charCtrl", ["$scope", "$http", "$log", function($scope, $http, $
         }   
         obj = angular.toJson(obj);
         ref.set(obj);
-    };
+    };// end saveChar
 
+    /**
+     * Load character
+     */
     $scope.loadChar = function(character) {
         let cn = character.toLowerCase();
         let ref = database.ref(`characters/${cn}`);
@@ -132,5 +139,5 @@ app.controller("charCtrl", ["$scope", "$http", "$log", function($scope, $http, $
                 $scope.load = char.load;
             });        
         });
-    };//end loadChar       
+    };// end loadChar       
 }]);

@@ -1,12 +1,12 @@
 <div class="character">
     
     <div class="charName"> 
-        <div class="charNameLabel" ng-click="changeName = true" ng-hide="changeName">NAME: {{charName}}</div>
+        <div class="charNameLabel" ng-click="changeName = true" ng-hide="changeName" ng-init="charName = 'Dummy'">NAME: {{charName}}</div>
         <input class="charNameInput" ng-blur="changeName = false" ng-show="changeName" type="text" ng-model="charName">        
     </div>
 
     <div class="strScore">
-        <div class="strScoreLabel" ng-click="changeStr = true" ng-hide="changeStr">STR: {{strScore}}</div>
+        <div class="strScoreLabel" ng-click="changeStr = true" ng-hide="changeStr" ng-init="strScore = 1">STR: {{strScore}}</div>
         <input class="strScoreInput" ng-blur="changeStr = false" ng-show="changeStr" type="text" ng-model="strScore">        
     </div>  
 
@@ -18,7 +18,7 @@
         Push, Pull, Lift: {{strScore * 30}} lbs
     </div>
 
-    <div class="currentLoad">
+    <div class="currentLoad" ng-init="load = 0">
         <div>Current Load: {{load.toFixed(2)}} lbs</div>  
         <div>Available weight: {{(strScore * 15 - load).toFixed(2)}} lbs</div>
     </div>

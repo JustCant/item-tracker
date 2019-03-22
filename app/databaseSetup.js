@@ -10,3 +10,4 @@ var config = {
 firebase.initializeApp(config);
 
 const database = firebase.database();
+const db = firebase.firestore();
