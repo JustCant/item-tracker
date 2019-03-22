@@ -206,11 +206,11 @@
     </div> 
     <button class="saveBtn" ng-click="saveChar(charName)">Save Character</button> 
     <div>
-        <button class="loadBtn" ng-click="loadNewChar = !loadNewChar" ng-show="!loadNewChar">Load Character</button>    
-        <label for="character" ng-show="loadNewChar">Pick a Character to Load</label>
-        <select name="loadCharacters" ng-model="selected" ng-show="loadNewChar" ng-options="character for character in characters"></select> 
-        <button class="confirmBtn" ng-click="loadChar(selected); loadNewChar = !loadNewChar" ng-show="loadNewChar">OK</button>
-        <button class="cancelBtn" ng-click="loadNewChar = !loadNewChar" ng-show="loadNewChar">Cancel</button>
+        <button class="loadBtn" ng-click="loading = !loading" ng-show="!loading">Load Character</button>    
+        <label for="character" ng-show="loading">Pick a Character to Load</label>
+        <select name="loadCharacters" ng-model="selected" ng-show="loading" ng-options="character for character in characters"></select> 
+        <button class="confirmBtn" ng-click="loadChar(selected); loading = !loading" ng-show="loading">OK</button>
+        <button class="cancelBtn" ng-click="loading = !loading" ng-show="loading">Cancel</button>
         <!--<button ng-click="deleteChar(charName)">Delete Character</button>-->
         <button class="closeBtn" title="Close character" data-my-close-char>X</button>
     </div>
