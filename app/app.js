@@ -13,4 +13,12 @@ app.config(function($locationProvider, $routeProvider) {
         .otherwise({
             redirectTo: "/home"
         });
+})
+.filter("normalize", function() {
+    return function(input) {
+        input = input || '';
+        let output = input.replace('_', ' ')
+                          .replace(input.charAt(0), input.charAt(0).toUpperCase());
+        return output;
+    };
 });

@@ -1,0 +1,37 @@
+[33m1459d38[m[33m ([m[1;36mHEAD -> [m[1;32msecondary[m[33m, [m[1;32mmaster[m[33m)[m nothing
+[33md9566f5[m Replaced real time database with firestore
+[33m0633260[m changed model for character loading purposes
+[33m27cd5d2[m Added a service which handles http requests and cleaned up character ctrl logic
+[33mb9b3231[m small changes
+[33mcfb1f7f[m Lots
+[33m0331e89[m Took DOM manipulation out of controller and added to directive
+[33mbfccc88[m reorganized/renamed directories
+[33m3757c02[m removed uglify from the tasklist
+[33me2b17b6[m Added error handling to make sure that the user cannot remove an quantity that exceeds the item's quantity
+[33mefa53ee[m Implemented ability to remove a desired quantity of a current item.
+[33m2e8dc5b[m Implemented ability to add a desired quantity of a single item.
+[33mcb6c05e[m Added pointer style to cursor for buttons.
+[33m10fab8a[m Improved drop down menus
+[33mc18b2c8[m enhanced the process of loading a character
+[33m5161147[m Added ability to delete characters
+[33m21c8e5c[m Added ability to load character from the database
+[33m8ad3cad[m Added ability to save to firebase DB
+[33m7ba889d[m jquery loose files
+[33m3bc54d0[m loose files
+[33m80c084e[m Added jquery and the ability to add multiple characters
+[33m8ac5a55[m added a clear button to the search functionality
+[33m5a15b7c[m Fixed bug that incorectly added items to the current items list
+[33md084d1f[m added quantity model to the view for items
+[33mb1c1e08[m removed duplicate items and added multiple item indicator
+[33m9d8a482[m added description property to each item and made that property available for display in the view through the title attribute.
+[33mfea6c63[m changed layout of character element
+[33m962285f[m Added filtering functionality to add items div
+[33m16b894d[m refactored charcter.js code and character.html
+[33mc996d6b[m finished adding all items from phb to items'json
+[33mb5fbd81[m Added a json file that hold all item information
+[33mdf662bf[m added weight functionality
+[33m1483376[m css grid implemented
+[33m3cbce18[m created a less direcory and file
+[33m44f7756[m added npm and grunt files
+[33mcb0b7da[m Initial grunt setup
+[33m9b9f4ae[m Inital commit: basic functions set up

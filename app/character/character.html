@@ -25,159 +25,28 @@
 
     <div class="characterItems">
         <h3>Current Items: </h3>
-        <div class="currentItems">
-            <h4>Weapons:</h4>    
-            <ul>
-                <div ng-repeat="weapon in currentItems.weapon track by $index">
-                    <li title="{{weapon.description}}" value="{{weapon.name}}">{{weapon.name}} - {{weapon.weight}} lbs x {{weapon.quantity}}
-                        <button ng-hide="howMany" class="removeBtn" ng-click="howMany = !howMany">REMOVE</button>
+        <div class="currentItems">               
+            <div ng-repeat="(key, val) in currentItems">
+                <h4>{{key|normalize}}</h4>
+                <div ng-repeat="item in val">                    
+                    <div title="{{item.description}}" value="{{item.name}}">{{item.name}} - {{item.weight}} lbs x {{item.quantity}}
+                        <button ng-hide="howMany" class="removeBtn btn btn-secondary" ng-click="howMany = !howMany">REMOVE</button>
                         <input ng-show="howMany" ng-model="quantity" type="text"/>
-                        <button class="confirmBtn" ng-show="howMany" ng-click="removeItem(weapon, currentItems.weapon, quantity); howMany = !howMany">OK</button>
-                        <button class="cancelBtn" ng-show="howMany" ng-click="howMany = !howMany">Cancel</button> 
-                    </li>
-                </div>                
-            </ul>
-            <h4>Armor:</h4> 
-            <ul>
-                <div ng-repeat="armor in currentItems.armor track by $index">                            
-                    <li title="{{armor.description}}" value="{{armor.name}}">{{armor.name}} - {{armor.weight}} lbs x {{armor.quantity}}
-                        <button ng-hide="howMany" class="removeBtn" ng-click="howMany = !howMany">REMOVE</button>
-                        <input ng-show="howMany" ng-model="quantity" type="text"/>
-                        <button class="confirmBtn" ng-show="howMany" ng-click="removeItem(armor, currentItems.armor, quantity); howMany = !howMany">OK</button>
-                        <button class="cancelBtn" ng-show="howMany" ng-click="howMany = !howMany">Cancel</button> 
-                    </li>
-                </div>                  
-            </ul>
-            <h4>Potions:</h4>
-            <ul>
-                <div ng-repeat="potion in currentItems.potion track by $index">                            
-                    <li title="{{potion.description}}" value="{{potion.name}}">{{potion.name}} - {{potion.weight}} lbs x {{potion.quantity}}
-                        <button ng-hide="howMany" class="removeBtn" ng-click="howMany = !howMany">REMOVE</button>
-                        <input ng-show="howMany" ng-model="quantity" type="text"/>
-                        <button class="confirmBtn" ng-show="howMany" ng-click="removeItem(potion, currentItems.potion, quantity); howMany = !howMany">OK</button>
-                        <button class="cancelBtn" ng-show="howMany" ng-click="howMany = !howMany">Cancel</button> 
-                    </li>
-                </div>                 
-            </ul>
-            <h4>Ammunition:</h4>
-            <ul>
-                <div ng-repeat="ammo in currentItems.ammunition track by $index">                            
-                    <li title="{{ammo.description}}" value="{{ammo.name}}">{{ammo.name}} - {{ammo.weight}} lbs x {{ammo.quantity}}
-                        <button ng-hide="howMany" class="removeBtn" ng-click="howMany = !howMany">REMOVE</button>
-                        <input ng-show="howMany" ng-model="quantity" type="text"/>
-                        <button class="confirmBtn" ng-show="howMany" ng-click="removeItem(ammo, currentItems.ammunition, quantity); howMany = !howMany">OK</button>
-                        <button class="cancelBtn" ng-show="howMany" ng-click="howMany = !howMany">Cancel</button> 
-                    </li>
-                </div>                 
-            </ul>
-            <h4>Clothing:</h4>
-            <ul>
-                <div ng-repeat="article in currentItems.clothing track by $index">                            
-                    <li title="{{article.description}}" value="{{article.name}}">{{article.name}} - {{article.weight}} lbs x {{article.quantity}}
-                        <button ng-hide="howMany" class="removeBtn" ng-click="howMany = !howMany">REMOVE</button>
-                        <input ng-show="howMany" ng-model="quantity" type="text"/>
-                        <button class="confirmBtn" ng-show="howMany" ng-click="removeItem(article, currentItems.clothing, quantity); howMany = !howMany">OK</button>
-                        <button class="cancelBtn" ng-show="howMany" ng-click="howMany = !howMany">Cancel</button> 
-                    </li>
-                </div>                
-            </ul>
-            <h4>Arcane Focus:</h4>
-            <ul>
-                <div ng-repeat="focus in currentItems.arcane_focus track by $index">                            
-                    <li title="{{focus.description}}" value="{{focus.name}}">{{focus.name}} - {{focus.weight}} lbs x {{focus.quantity}}
-                        <button ng-hide="howMany" class="removeBtn" ng-click="howMany = !howMany">REMOVE</button>
-                        <input ng-show="howMany" ng-model="quantity" type="text"/>
-                        <button class="confirmBtn" ng-show="howMany" ng-click="removeItem(focus, currentItems.arcane_focus, quantity); howMany = !howMany">OK</button>
-                        <button class="cancelBtn" ng-show="howMany" ng-click="howMany = !howMany">Cancel</button> 
-                    </li>
-                </div>                 
-            </ul>
-            <h4>Druidic Focus:</h4>
-            <ul>
-                <div ng-repeat="focus in currentItems.druidic_focus track by $index">                            
-                    <li title="{{focus.description}}" value="{{focus.name}}">{{focus.name}} - {{focus.weight}} lbs x {{focus.quantity}}
-                        <button ng-hide="howMany" class="removeBtn" ng-click="howMany = !howMany">REMOVE</button>
-                        <input ng-show="howMany" ng-model="quantity" type="text"/>
-                        <button class="confirmBtn" ng-show="howMany" ng-click="removeItem(focus, currentItems.druidic_focus, quantity); howMany = !howMany">OK</button>
-                        <button class="cancelBtn" ng-show="howMany" ng-click="howMany = !howMany">Cancel</button> 
-                    </li>
-                </div>                 
-            </ul>
-            <h4>Holy Symbol:</h4>
-            <ul>
-                <div ng-repeat="symbol in currentItems.holy_symbol track by $index">                            
-                    <li title="{{symbol.description}}" value="{{symbol.name}}">{{symbol.name}} - {{symbol.weight}} lbs x {{symbol.quantity}}
-                        <button ng-hide="howMany" class="removeBtn" ng-click="howMany = !howMany">REMOVE</button>
-                        <input ng-show="howMany" ng-model="quantity" type="text"/>
-                        <button class="confirmBtn" ng-show="howMany" ng-click="removeItem(symbol, currentItems.holy_symbol, quantity); howMany = !howMany">OK</button>
-                        <button class="cancelBtn" ng-show="howMany" ng-click="howMany = !howMany">Cancel</button> 
-                    </li>
-                </div>                 
-            </ul>
-            <h4>Artisans Tools:</h4>
-            <ul>
-                <div ng-repeat="tool in currentItems.artisans_tools track by $index">                            
-                    <li title="{{tool.description}}" value="{{tool.name}}">{{tool.name}} - {{tool.weight}} lbs x {{tool.quantity}}
-                        <button ng-hide="howMany" class="removeBtn" ng-click="howMany = !howMany">REMOVE</button>
-                        <input ng-show="howMany" ng-model="quantity" type="text"/>
-                        <button class="confirmBtn" ng-show="howMany" ng-click="removeItem(tool, currentItems.artisans_tools, quantity); howMany = !howMany">OK</button>
-                        <button class="cancelBtn" ng-show="howMany" ng-click="howMany = !howMany">Cancel</button> 
-                    </li>
-                </div> 
-            </ul>
-            <h4>Gaming Sets:</h4>
-            <ul>
-                <div ng-repeat="game in currentItems.gaming_set track by $index">                            
-                    <li title="{{game.description}}" value="{{game.name}}">{{game.name}} - {{game.weight}} lbs x {{game.quantity}}
-                        <button ng-hide="howMany" class="removeBtn" ng-click="howMany = !howMany">REMOVE</button>
-                        <input ng-show="howMany" ng-model="quantity" type="text"/>
-                        <button class="confirmBtn" ng-show="howMany" ng-click="removeItem(game, currentItems.gaming_set, quantity); howMany = !howMany">OK</button>
-                        <button class="cancelBtn" ng-show="howMany" ng-click="howMany = !howMany">Cancel</button> 
-                    </li>
-                </div> 
-            </ul>
-            <h4>Kits:</h4>
-            <ul>
-                <div ng-repeat="kit in currentItems.kit track by $index">                            
-                    <li title="{{kit.description}}" value="{{kit.name}}">{{kit.name}} - {{kit.weight}} lbs x {{kit.quantity}}
-                        <button ng-hide="howMany" class="removeBtn" ng-click="howMany = !howMany">REMOVE</button>
-                        <input ng-show="howMany" ng-model="quantity" type="text"/>
-                        <button class="confirmBtn" ng-show="howMany" ng-click="removeItem(kit, currentItems.kit, quantity); howMany = !howMany">OK</button>
-                        <button class="cancelBtn" ng-show="howMany" ng-click="howMany = !howMany">Cancel</button> 
-                    </li>
+                        <button class="confirmBtn btn btn-primary" ng-show="howMany" ng-click="removeItem(item, val, quantity); howMany = !howMany">OK</button>
+                        <button class="cancelBtn btn btn-warning" ng-show="howMany" ng-click="howMany = !howMany">Cancel</button> 
+                    </div>
                 </div>
-            </ul>
-            <h4>Musical Instruments:</h4>
-            <ul>
-                <div ng-repeat="instrument in currentItems.musical_instrument track by $index">                            
-                    <li title="{{instrument.description}}" value="{{instrument.name}}">{{instrument.name}} - {{instrument.weight}} lbs x {{instrument.quantity}}
-                        <button ng-hide="howMany" class="removeBtn" ng-click="howMany = !howMany">REMOVE</button>
-                        <input ng-show="howMany" ng-model="quantity" type="text"/>
-                        <button class="confirmBtn" ng-show="howMany" ng-click="removeItem(instrument, currentItems.musical_instrument, quantity); howMany = !howMany">OK</button>
-                        <button class="cancelBtn" ng-show="howMany" ng-click="howMany = !howMany">Cancel</button> 
-                    </li>
-                </div>
-            </ul>
-            <h4>Miscellaneous:</h4>
-            <ul>
-                <div ng-repeat="item in currentItems.miscellaneous track by $index">                            
-                    <li title="{{item.description}}" value="{{item.name}}">{{item.name}} - {{item.weight}} lbs x {{item.quantity}}
-                        <button ng-hide="howMany" class="removeBtn" ng-click="howMany = !howMany">REMOVE</button>
-                        <input ng-show="howMany" ng-model="quantity" type="text"/>
-                        <button class="confirmBtn" ng-show="howMany" ng-click="removeItem(item, currentItems.miscellaneous, quantity); howMany = !howMany">OK</button>
-                        <button class="cancelBtn" ng-show="howMany" ng-click="howMany = !howMany">Cancel</button> 
-                    </li>
-                </div>
-            </ul>
-        </div>
-    </div>
-    
+                <hr> 
+            </div>                       
+        </div>        
+    </div>    
+
     <div class="addItems">
         Add Item:
         <label style="display: block">Search by Name: <input ng-model="searchName"></label>
-        <button class="clearBtn" style="display: block" ng-click="clearSearchName()">Clear</button>
+        <button class="clearBtn btn btn-secondary" style="display: block" ng-click="clearSearchName()">Clear</button>
         Search by Type:
-        <select ng-model="searchType">
+        <select ng-model="searchType" class="btn btn-light dropdown-toggle">
             <option value="">All</option>
             <option value="weapon">Weapon</option>
             <option value="armor">Armor</option>
@@ -193,25 +62,30 @@
             <option value="musical_instrument">Musical Instrument</option>
             <option value="miscellaneous">Miscellaneous</option>
         </select>
-        <ul>
+        <ul class="items">
             <div ng-repeat="item in itemList | filter:{'name': searchName, 'type': searchType}">
-                <li title="{{item.description}}" value="{{item.name}}" ng-click="howMany = !howMany" >
+                <li title="{{item.description}}" value="{{item.name}}" ng-click="howMany = !howMany">
                     {{item.name}} - {{item.weight}} lbs                    
                 </li>   
                 <input ng-show="howMany" ng-model="quantity" type="text"/>
-                <button class="confirmBtn" ng-show="howMany" ng-click="addItem(item, quantity); howMany = !howMany">Add</button>
-                <button class="cancelBtn" ng-show="howMany" ng-click="howMany = !howMany">Cancel</button>  
+                <button class="confirmBtn btn btn-primary" ng-show="howMany" ng-click="addItem(item, quantity); howMany = !howMany">Add</button>
+                <button class="cancelBtn btn btn-warning" ng-show="howMany" ng-click="howMany = !howMany">Cancel</button>  
             </div>       
         </ul>
     </div> 
-    <button class="saveBtn" ng-click="saveChar(id)">Save Character</button> 
-    <div>
-        <button class="loadBtn" ng-click="loading = !loading" ng-show="!loading">Load Character</button>    
+
+    <button class="saveBtn btn btn-success" ng-click="saveChar(id)">Save Character</button> 
+
+    <div>        
+        <button class="loadBtn btn btn-secondary" ng-click="loading = !loading" ng-show="!loading">Load Character</button>    
         <label for="character" ng-show="loading">Pick a Character to Load</label>
-        <select name="loadCharacters" ng-model="selected" ng-show="loading" ng-options="character for character in characters"></select> 
-        <button class="confirmBtn" ng-click="loadChar(selected); loading = !loading" ng-show="loading">OK</button>
-        <button class="cancelBtn" ng-click="loading = !loading" ng-show="loading">Cancel</button>
+        <select class="btn btn-light dropdown-toggle" name="loadCharacters" ng-model="selected" ng-show="loading" ng-options="character for character in characters"></select> 
+        <button class="confirmBtn btn btn-primary" ng-click="loadChar(selected); loading = !loading" ng-show="loading">OK</button>
+        <button class="cancelBtn btn btn-warning" ng-click="loading = !loading" ng-show="loading">Cancel</button>
         <!--<button ng-click="deleteChar(charName)">Delete Character</button>-->
-        <button class="closeBtn" title="Close character" data-my-close-char>X</button>
+        <button type="button" class="close closeBtn" aria-label="Close" title="Close character" data-my-close-char>
+            <span aria-hidden="true">&times;</span>
+        </button>
     </div>
+    
 </div>

@@ -1,6 +1,6 @@
 <div id="characters" ng-controller="charsCtrl">
-    <button id="createNewChar" data-my-char-create>Create New Character</button>    
-    <!--
+    <button id="createNewChar" class="btn btn-primary" data-my-char-create>Create New Character</button>    
+    <!--  
     <button ng-click="loadNewChar = !loadNewChar" ng-hide="loadNewChar">Load Character</button>
     <select name="loadCharacters" ng-model="loadedCharacter" ng-show="loadNewChar">
         <option value="{{character}}" ng-repeat="character in characters track by $index">{{character}}</option>
@@ -8,11 +8,11 @@
     <button ng-click="loadChar(loadedCharacter); loadNewChar = !loadNewChar" ng-show="loadNewChar">LOAD</button>
     <button ng-click="loadNewChar = !loadNewChar" ng-show="loadNewChar">Cancel</button> 
     -->
-    <button id="deleteBtn" ng-click="delete = !delete" ng-hide="delete">Delete Character</button> 
+    <button id="deleteBtn" class="btn btn-secondary" ng-click="delete = !delete" ng-hide="delete">Delete Character</button> 
     <div>
         <label for="character" ng-show="delete">Pick a Character to Delete</label>
-        <select name="characters" ng-model="selected" ng-show="delete" ng-options="character for character in characters"></select>  
-        <button id="deleteConfirmBtn" ng-click="deleteChar(selected); delete = !delete" ng-show="delete">DELETE</button>
-        <button class="cancelBtn" ng-click="delete = !delete" ng-show="delete">Cancel</button> 
+        <select class="btn btn-light dropdown-toggle" name="characters" ng-model="selected" ng-show="delete" ng-options="character for character in characters"></select>  
+        <button id="deleteConfirmBtn" class="btn btn-danger" ng-click="deleteChar(selected); delete = !delete" ng-show="delete">DELETE</button>
+        <button class="cancelBtn btn btn-warning" ng-click="delete = !delete" ng-show="delete">Cancel</button> 
     </div>
 </div>     

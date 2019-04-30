@@ -11,14 +11,21 @@
   "dependencies": {
     "angular": "^1.7.7",
     "angular-route": "^1.7.7",
+    "bootstrap": "^4.3.1",
+    "firebase": "^5.9.4",
     "jquery": "^3.3.1"
   },
   "devDependencies": {
+    "angular-mocks": "^1.7.8",
     "grunt": "^1.0.3",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-less": "^2.0.0",
     "grunt-contrib-uglify": "^4.0.0",
-    "grunt-contrib-watch": "^1.1.0"
+    "grunt-contrib-watch": "^1.1.0",
+    "jasmine": "^3.4.0",
+    "karma": "^4.1.0",
+    "karma-jasmine": "^2.0.1",
+    "karma-phantomjs-launcher": "^1.0.4"
   }
 }
