@@ -1,14 +1,5 @@
 module.exports = function(grunt) {
     grunt.initConfig({
-      // concat: {
-      //   options: {
-      //     separator: '',
-      //   },
-      //   dist: {
-      //     src: ['node_modules/jquery/dist/jquery.min.js', 'node_modules/angular/angular.min.js', 'vendors/angular-route.min.js', 'app/databaseSetup.js', 'app/app.js', 'app/dashboard/*.js', 'app/character/*.js'],
-      //     dest: 'main.min.js',
-      //   },
-      // },
       cssmin: {
         options: {
           mergeIntoShorthands: false,
@@ -16,7 +7,7 @@ module.exports = function(grunt) {
         },
         target: {
           files: {
-            'assets/css/main.min.css': ['assets/css/main.css']
+            'app/assets/css/main.min.css': ['assets/css/main.css']
           }
         }
       },
@@ -29,7 +20,7 @@ module.exports = function(grunt) {
       },
       watch: {
           js: {
-            files: ['app/character/*.js', 'app/dashboard/*.js', 'app/app.js', 'app/databaseSetup.js'],
+            files: ['app/character/*.js', 'app/dashboard/*.js', 'app/*.js'],
             tasks: ['concat'],
             options: {
               spawn: false,
@@ -53,7 +44,6 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    //grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
 

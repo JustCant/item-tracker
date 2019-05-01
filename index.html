@@ -7,13 +7,12 @@
     <title>Item Tracker</title>
     <base href="/">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="app/assets/css/main.min.css">
 </head>
     <body>
         <ng-view></ng-view>       
         <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
-        <!--<script type="text/javascript" src="node_modules/angular-mocks/angular-mocks.js"></script>-->
         <script type="text/javascript" src="vendors/angular-route.min.js"></script>   
         <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
@@ -25,6 +24,6 @@
         <script type="text/javascript" src="app/dashboard/front-page.controller.js"></script>
         <script type="text/javascript" src="app/dashboard/create-char.directive.js"></script>
         <script type="text/javascript" src="app/character/close-char.directive.js"></script>
-        <!-- <script> src="main.min.js"</script> -->
+        <script> src="build/main.min.js"</script>
     </body>
 </html>
