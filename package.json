@@ -9,7 +9,7 @@
   "author": "Justin Cantley",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.7.7",
+    "angular": "^1.8.3",
     "angular-route": "^1.7.7",
     "bootstrap": "^4.3.1",
     "firebase": "^5.9.4",
